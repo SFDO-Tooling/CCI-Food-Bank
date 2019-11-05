@@ -1,0 +1,19 @@
+minimum_cumulusci_version: '3.1.0'
+project:
+    name: CCI-Food-Bank
+    package:
+        name:  CumulusCI Food Bank Demo
+        namespace: jlccifood1
+        api_version: '46.0'
+
+tasks:
+    robot:
+        options:
+            suites: robot/CCI-Food-Bank/tests
+            options:
+                outputdir: robot/CCI-Food-Bank/results
+
+    robot_testdoc:
+        options:
+            path: robot/CCI-Food-Bank/tests
+            output: robot/CCI-Food-Bank/doc/CCI-Food-Bank_tests.html
