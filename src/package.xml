@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>CumulusCI Food Bank Demo</fullName>
+    <types>
+        <members>Delivery_Item__c.Delivery__c</members>
+        <members>Delivery_Item__c.Description__c</members>
+        <members>Delivery_Item__c.Storage_Requirements__c</members>
+        <members>Delivery__c.Scheduled_Date__c</members>
+        <members>Delivery__c.Status__c</members>
+        <members>Delivery__c.Supplier__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>Delivery_Item__c</members>
+        <members>Delivery__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Delivery__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Delivery_Item__c-Delivery Item Layout</members>
+        <members>Delivery__c-Delivery Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>Delivery__c.All</members>
+        <name>ListView</name>
+    </types>
     <version>46.0</version>
 </Package>
