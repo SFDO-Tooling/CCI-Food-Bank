@@ -28,5 +28,5 @@
         <members>Delivery__c.All</members>
         <name>ListView</name>
     </types>
-    <version>46.0</version>
+    <version>47.0</version>
 </Package>
