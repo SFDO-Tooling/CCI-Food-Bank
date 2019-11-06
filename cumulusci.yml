@@ -4,7 +4,7 @@ project:
     package:
         name:  CumulusCI Food Bank Demo
         namespace: jlccifood1
-        api_version: '46.0'
+        api_version: '47.0'
 
 tasks:
     robot:
