@@ -1,15 +1,4 @@
 {
   "orgName": "CumulusCI Food Bank Demo - Dev Org",
-  "edition": "Developer",
-  "settings": {
-    "lightningExperienceSettings": {
-      "enableS1DesktopEnabled": true
-    },
-    "chatterSettings": {
-      "enableChatter": true
-    },
-    "languageSettings": {
-      "enableTranslationWorkbench": true
-    }
-  }
+  "edition": "Developer"
 }
