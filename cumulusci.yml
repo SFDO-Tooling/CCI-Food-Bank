@@ -17,3 +17,9 @@ tasks:
         options:
             path: robot/CCI-Food-Bank/tests
             output: robot/CCI-Food-Bank/doc/CCI-Food-Bank_tests.html
+
+flows:
+    config_qa:
+        steps:
+            3:
+                task: load_dataset
