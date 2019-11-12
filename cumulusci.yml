@@ -3,7 +3,7 @@ project:
     name: CCI-Food-Bank
     package:
         name:  CumulusCI Food Bank Demo
-        namespace: jlccifood1
+        namespace: ccifb1
         api_version: '47.0'
 
 tasks:
