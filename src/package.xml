@@ -4,6 +4,7 @@
     <types>
         <members>Delivery_Item__c.Delivery__c</members>
         <members>Delivery_Item__c.Description__c</members>
+        <members>Delivery_Item__c.Quantity__c</members>
         <members>Delivery_Item__c.Storage_Requirements__c</members>
         <members>Delivery__c.Scheduled_Date__c</members>
         <members>Delivery__c.Status__c</members>

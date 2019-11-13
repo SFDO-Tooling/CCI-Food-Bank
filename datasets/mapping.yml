@@ -24,6 +24,7 @@ Insert Delivery_Item__c:
   fields:
     Id: sf_id
     Description__c: Description__c
+    Quantity__c: Quantity__c
     Storage_Requirements__c: Storage_Requirements__c
   lookups:
     Delivery__c:
