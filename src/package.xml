@@ -2,6 +2,10 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>CumulusCI Food Bank Demo</fullName>
     <types>
+        <members>Sample</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
         <members>Delivery_Item__c.Delivery__c</members>
         <members>Delivery_Item__c.Description__c</members>
         <members>Delivery_Item__c.Storage_Requirements__c</members>
