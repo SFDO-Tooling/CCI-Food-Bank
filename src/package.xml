@@ -13,6 +13,7 @@
     <types>
         <members>Delivery_Item__c</members>
         <members>Delivery__c</members>
+        <members>tim_test_object__c</members>
         <name>CustomObject</name>
     </types>
     <types>
@@ -22,11 +23,19 @@
     <types>
         <members>Delivery_Item__c-Delivery Item Layout</members>
         <members>Delivery__c-Delivery Layout</members>
+        <members>tim_test_object__c-tim-test-object Layout</members>
         <name>Layout</name>
     </types>
     <types>
         <members>Delivery__c.All</members>
         <name>ListView</name>
+    </types>
+    <types>
+        <members>Admin</members>
+        <members>Custom%3A Marketing Profile</members>
+        <members>Custom%3A Sales Profile</members>
+        <members>Custom%3A Support Profile</members>
+        <name>Profile</name>
     </types>
     <version>47.0</version>
 </Package>

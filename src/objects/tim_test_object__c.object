@@ -149,63 +149,17 @@
     <enableHistory>false</enableHistory>
     <enableLicensing>false</enableLicensing>
     <enableReports>false</enableReports>
-    <enableSearch>false</enableSearch>
+    <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
-    <label>Delivery Item</label>
+    <externalSharingModel>Private</externalSharingModel>
+    <label>tim-test-object</label>
     <nameField>
-        <displayFormat>DI-{000000}</displayFormat>
-        <label>Delivery Item Name</label>
-        <type>AutoNumber</type>
+        <label>tim-test-object Name</label>
+        <type>Text</type>
     </nameField>
-    <pluralLabel>Delivery Items</pluralLabel>
+    <pluralLabel>tim-test-object</pluralLabel>
     <searchLayouts/>
-    <sharingModel>ControlledByParent</sharingModel>
+    <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
-    <fields>
-        <fullName>Delivery__c</fullName>
-        <externalId>false</externalId>
-        <label>Delivery</label>
-        <referenceTo>Delivery__c</referenceTo>
-        <relationshipLabel>Delivery Items</relationshipLabel>
-        <relationshipName>Delivery_Items</relationshipName>
-        <relationshipOrder>0</relationshipOrder>
-        <reparentableMasterDetail>false</reparentableMasterDetail>
-        <trackTrending>false</trackTrending>
-        <type>MasterDetail</type>
-        <writeRequiresMasterRead>false</writeRequiresMasterRead>
-    </fields>
-    <fields>
-        <fullName>Description__c</fullName>
-        <externalId>false</externalId>
-        <label>Description</label>
-        <length>32768</length>
-        <trackTrending>false</trackTrending>
-        <type>LongTextArea</type>
-        <visibleLines>3</visibleLines>
-    </fields>
-    <fields>
-        <fullName>Storage_Requirements__c</fullName>
-        <externalId>false</externalId>
-        <label>Storage Requirements</label>
-        <required>false</required>
-        <trackTrending>false</trackTrending>
-        <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>Refrigerated</fullName>
-                    <default>false</default>
-                    <label>Refrigerated</label>
-                </value>
-                <value>
-                    <fullName>Frozen</fullName>
-                    <default>false</default>
-                    <label>Frozen</label>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
-    </fields>
 </CustomObject>
