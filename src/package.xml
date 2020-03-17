@@ -28,5 +28,9 @@
         <members>Delivery__c.All</members>
         <name>ListView</name>
     </types>
+    <types>
+        <members>Delivery__c.Scheduled_Date_Future</members>
+        <name>ValidationRule</name>
+    </types>
     <version>47.0</version>
 </Package>

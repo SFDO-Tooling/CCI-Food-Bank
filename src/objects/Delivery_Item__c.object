@@ -152,6 +152,16 @@
     <enableSearch>false</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
+    <label>Delivery Item</label>
+    <nameField>
+        <displayFormat>DI-{000000}</displayFormat>
+        <label>Delivery Item Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Delivery Items</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
     <fields>
         <fullName>Delivery__c</fullName>
         <externalId>false</externalId>
@@ -198,14 +208,4 @@
             </valueSetDefinition>
         </valueSet>
     </fields>
-    <label>Delivery Item</label>
-    <nameField>
-        <displayFormat>DI-{000000}</displayFormat>
-        <label>Delivery Item Name</label>
-        <type>AutoNumber</type>
-    </nameField>
-    <pluralLabel>Delivery Items</pluralLabel>
-    <searchLayouts/>
-    <sharingModel>ControlledByParent</sharingModel>
-    <visibility>Public</visibility>
 </CustomObject>
