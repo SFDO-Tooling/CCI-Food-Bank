@@ -152,6 +152,16 @@
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
+    <label>Delivery</label>
+    <nameField>
+        <displayFormat>DI-{0000}</displayFormat>
+        <label>Delivery Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Deliveries</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
     <fields>
         <fullName>Scheduled_Date__c</fullName>
         <externalId>false</externalId>
@@ -201,7 +211,6 @@
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
-    <label>Delivery</label>
     <listViews>
         <fullName>All</fullName>
         <columns>NAME</columns>
@@ -211,13 +220,4 @@
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>
-    <nameField>
-        <displayFormat>DI-{0000}</displayFormat>
-        <label>Delivery Name</label>
-        <type>AutoNumber</type>
-    </nameField>
-    <pluralLabel>Deliveries</pluralLabel>
-    <searchLayouts/>
-    <sharingModel>ReadWrite</sharingModel>
-    <visibility>Public</visibility>
 </CustomObject>
