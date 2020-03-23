@@ -5,6 +5,7 @@ project:
         name:  CumulusCI Food Bank Demo
         namespace: ccifb1
         api_version: '47.0'
+    source_format: sfdx
 
 tasks:
     robot:
@@ -18,8 +19,15 @@ tasks:
             path: robot/CCI-Food-Bank/tests
             output: robot/CCI-Food-Bank/doc/CCI-Food-Bank_tests.html
 
+    deploy_qa:
+        class_path: cumulusci.tasks.salesforce.Deploy
+        options:
+            path: unpackaged/config/qa
+
 flows:
     config_qa:
         steps:
             3:
                 task: load_dataset
+            4:
+                task: deploy_qa
