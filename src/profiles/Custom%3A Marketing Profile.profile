@@ -26,6 +26,11 @@
         <field>Delivery__c.Supplier__c</field>
         <readable>false</readable>
     </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>tim_test_object__c.id__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
     <layoutAssignments>
         <layout>Delivery_Item__c-Delivery Item Layout</layout>
     </layoutAssignments>
