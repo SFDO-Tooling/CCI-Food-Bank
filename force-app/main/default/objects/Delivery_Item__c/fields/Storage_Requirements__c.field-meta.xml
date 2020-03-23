@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Storage_Requirements__c</fullName>
+    <externalId>false</externalId>
+    <label>Storage Requirements</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Refrigerated</fullName>
+                <default>false</default>
+                <label>Refrigerated</label>
+            </value>
+            <value>
+                <fullName>Frozen</fullName>
+                <default>false</default>
+                <label>Frozen</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
