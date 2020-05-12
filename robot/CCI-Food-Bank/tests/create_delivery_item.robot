@@ -10,14 +10,11 @@ Via API
     # Create test values
     ${account_name} =        Generate Random String
     ${description} =         Generate Random String
-    ${scheduled_date} =      Get Current Date
-    ...                        result_format=datetime
 
     # Create needed data
     &{account} =             API Create Account  
     ...                        ${account_name}
     &{delivery} =            API Create Delivery
-    ...                        scheduled_date=${scheduled_date}
     ...                        status=Scheduled
     ...                        supplier=&{account}[Id]
 
@@ -36,14 +33,11 @@ Via UI
     # Create test values
     ${account_name} =       Generate Random String
     ${description} =        Generate Random String
-    ${scheduled_date} =     Get Current Date
-    ...                       result_format=datetime
 
     # Create needed data
     &{account} =            API Create Account  
     ...                       ${account_name}
     &{delivery} =           API Create Delivery
-    ...                       scheduled_date=${scheduled_date}
     ...                       status=Scheduled
     ...                       supplier=&{account}[Id]
 
