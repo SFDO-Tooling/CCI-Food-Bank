@@ -1,0 +1,28 @@
+{
+    "product": {
+        "title": {
+            "message": "CCI Food Bank",
+            "description": "name of product"
+        },
+        "short_description": {
+            "message": "A demo project for tracking deliveries to food banks",
+            "description": "tagline of product"
+        }
+    },
+    "plan:install": {
+        "title": {
+            "message": "Install CCI Food Bank",
+            "description": "title of installation plan"
+        }
+    },
+    "steps": {
+        "Install {product} {version}": {
+            "message": "Install {product} {version}",
+            "description": "title of installation step"
+        },
+        "Update Admin Profile": {
+            "message": "Update Admin Profile",
+            "description": "title of installation step"
+        }
+    }
+}

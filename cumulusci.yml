@@ -6,6 +6,8 @@ project:
         namespace: ccifb1
         api_version: '47.0'
     source_format: sfdx
+    git:
+        repo_url: "https://github.com/SFDO-Tooling/CCI-Food-Bank"
 
 tasks:
     robot:
@@ -31,3 +33,13 @@ flows:
                 task: load_dataset
             4:
                 task: deploy_qa
+
+plans:
+    install:
+        slug: install
+        title: Install CCI Food Bank
+        tier: primary
+        is_listed: True
+        steps:
+            1:
+                flow: install_prod
