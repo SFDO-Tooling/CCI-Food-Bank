@@ -19,21 +19,16 @@ Via API
 
     # Create delivery via the API
     &{delivery} =        API Create Delivery
-    ...                    scheduled_date=${scheduled_date}
     ...                    status=Scheduled
     ...                    supplier=&{account}[Id]
 
     Validate Delivery    id=&{delivery}[Id]
-    ...                  scheduled_date=${scheduled_date}
     ...                  status=Scheduled
     ...                  supplier=${account_name}
 
 Via UI
     # Create test values
     ${account_name} =      Generate Random String
-    ${scheduled_date} =    Get Current Date
-    ...                      result_format=datetime
-    ${date_str} =          Convert Date  ${scheduled_date}  result_format=%-m/%-d/%Y
 
     # Create needed data
     API Create Account     ${account_name}
@@ -43,8 +38,6 @@ Via UI
     Click Object Button    New
     Wait for modal         New  Delivery
     Populate Lookup Field  Supplier  ${account_name}
-    Open Date Picker       Scheduled Date
-    Pick Date              Today
     Populate Picklist      Status  Scheduled
     Click Modal Button     Save
     Wait Until Modal Is Closed
@@ -54,25 +47,20 @@ Via UI
     Store Session Record   Delivery__c  ${delivery_id}
 
     Validate Delivery      id=${delivery_id}
-    ...                    scheduled_date=${scheduled_date}
     ...                    status=Scheduled
     ...                    supplier=${account_name}
 
 *** Keywords ***
 Validate Delivery
-    [Arguments]  ${id}  ${scheduled_date}  ${status}  ${supplier}
+    [Arguments]  ${id}  ${status}  ${supplier}
 
     # Validate via API
     &{delivery} =        Salesforce Get  Delivery__c  ${id}
     &{account} =         Salesforce Get  Account  &{delivery}[Supplier__c]
-    ${date_str} =        Convert Date  ${scheduled_date}  result_format=%Y-%m-%d
     Should Be Equal      &{delivery}[Status__c]  ${status}
-    Should Be Equal      &{delivery}[Scheduled_Date__c]  ${date_str}
     Should Be Equal      &{account}[Name]  ${supplier}
 
     # Validate via UI
     Go To Page           Detail  Delivery__c  ${id}
-    ${date_str} =        Convert Date  ${scheduled_date}  result_format=%-m/%-d/%Y
-    Page Should Contain  ${date_str}
     Page Should Contain  ${status}
     Page Should Contain  ${supplier}
