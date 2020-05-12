@@ -16,10 +16,8 @@ API Create Account
     [return]  &{account}
 
 API Create Delivery
-    [Arguments]       ${scheduled_date}  ${status}  ${supplier}
-    ${date_str} =     Convert Date  ${scheduled_date}  result_format=%Y-%m-%d
+    [Arguments]       ${status}  ${supplier}
     ${delivery_id} =  Salesforce Insert  Delivery__c
-    ...                 Scheduled_Date__c=${date_str}
     ...                 Status__c=${status}
     ...                 Supplier__c=${supplier}
     &{delivery} =     Salesforce Get  Delivery__c  ${delivery_id}
