@@ -2,7 +2,7 @@ minimum_cumulusci_version: '3.1.0'
 project:
     name: CCI-Food-Bank
     package:
-        name:  CumulusCI Food Bank Demo
+        name:  CumulusCI Food Bank Demo 2
         namespace: ccifb1
         api_version: '47.0'
     source_format: sfdx
