@@ -37,7 +37,7 @@ flows:
 plans:
     install:
         slug: install
-        title: Install CCI Food Bank TESTDIFF
+        title: Install CCI Food Bank 
         tier: primary
         is_listed: True
         steps:
