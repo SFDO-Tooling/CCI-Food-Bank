@@ -32,7 +32,7 @@ flows:
             3:
                 task: load_dataset
             4:
-                task: deploy_qa
+                task: deploy_qa Modified
 
 plans:
     install:
