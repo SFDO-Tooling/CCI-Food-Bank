@@ -33,6 +33,8 @@ flows:
                 task: load_dataset
             4:
                 task: deploy_qa
+                
+                new
 
 plans:
     install:
