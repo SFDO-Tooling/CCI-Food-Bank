@@ -34,6 +34,19 @@ flows:
             4:
                 task: deploy_qa
 
+    unmanaged_tests:
+        steps:
+            1:
+                task: deploy
+                options:
+                    path: unpackaged/test/unmanaged
+            2:
+                task: run_tests
+                options:
+                    managed: False
+                    test_name_match: UnmanagedTEST
+
+
 plans:
     install:
         slug: install
