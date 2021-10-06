@@ -42,6 +42,17 @@
                 <behavior>Edit</behavior>
                 <field>Is_Local__c</field>
             </layoutItems>
+<<<<<<< Updated upstream
+=======
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Is_Active__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Rating__c</field>
+            </layoutItems>
+>>>>>>> Stashed changes
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

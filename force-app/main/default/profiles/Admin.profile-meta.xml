@@ -3,9 +3,25 @@
     <custom>false</custom>
     <fieldPermissions>
         <editable>true</editable>
+<<<<<<< Updated upstream
         <field>Order.Is_Local__c</field>
         <readable>true</readable>
     </fieldPermissions>
+=======
+        <field>Order.Is_Active__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Order.Is_Local__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Order.Rating__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+>>>>>>> Stashed changes
     <layoutAssignments>
         <layout>Order-Order Layout</layout>
     </layoutAssignments>
