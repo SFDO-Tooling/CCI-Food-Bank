@@ -26,10 +26,6 @@
                 <behavior>Edit</behavior>
                 <field>Notes__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>DjFoodBankID__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -80,7 +76,7 @@
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h2D000000lvtk</masterLabel>
+        <masterLabel>00h63000006htOp</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>
