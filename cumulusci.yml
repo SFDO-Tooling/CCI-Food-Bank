@@ -36,7 +36,7 @@ flows:
 
 orgs:
     scratch:
-        trial:
+        dev:
             config_file: orgs/trial.json
 
 plans:
