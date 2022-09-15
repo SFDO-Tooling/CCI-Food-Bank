@@ -1,13 +1,17 @@
-minimum_cumulusci_version: '3.1.0'
+minimum_cumulusci_version: "3.1.0"
 project:
     name: CCI-Food-Bank
     package:
-        name:  CumulusCI Food Bank Demo
+        name: CumulusCI Food Bank Demo
         namespace: ccifb1
-        api_version: '47.0'
+        api_version: "47.0"
     source_format: sfdx
     git:
         repo_url: "https://github.com/SFDO-Tooling/CCI-Food-Bank"
+
+sources:
+    omni:
+        github: https://github.com/SalesforceFoundation/omni-cci
 
 tasks:
     robot:
@@ -33,11 +37,21 @@ flows:
                 task: load_dataset
             4:
                 task: deploy_qa
+    omni_org:
+        steps:
+            3:
+                flow: dev_org
+            4:
+                flow: omni:install_omnistudio
 
 orgs:
     scratch:
         trial:
             config_file: orgs/trial.json
+        omni:
+            config_file: orgs/omni.json
+            setup_flow: omni_org
+            days: 7
 
 plans:
     install:
