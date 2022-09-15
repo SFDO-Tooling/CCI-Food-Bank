@@ -50,7 +50,7 @@ orgs:
             config_file: orgs/trial.json
         omni:
             config_file: orgs/omni.json
-            setup_flow: setup_omnistudio
+            setup_flow: omni_org
             days: 7
 
 plans:
