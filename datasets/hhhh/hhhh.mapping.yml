@@ -1,0 +1,17 @@
+Insert Account:
+  sf_object: Account
+  table: Account
+  fields:
+  - Name
+Insert Contact:
+  sf_object: Contact
+  table: Contact
+  fields:
+  - DoNotCall
+  - HasOptedOutOfEmail
+  - HasOptedOutOfFax
+  - LastName
+  lookups:
+    AccountId:
+      table: Account
+      key_field: AccountId
