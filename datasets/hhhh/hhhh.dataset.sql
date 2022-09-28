@@ -2,6 +2,7 @@ BEGIN TRANSACTION;
 CREATE TABLE "Account" (
 	id INTEGER NOT NULL, 
 	"Name" VARCHAR(255), 
+	"AccountNumber" VARCHAR(255), 
 	PRIMARY KEY (id)
 );
 CREATE TABLE "Contact" (

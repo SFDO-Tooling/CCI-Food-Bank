@@ -3,6 +3,7 @@ Insert Account:
   table: Account
   fields:
   - Name
+  - AccountNumber
 Insert Contact:
   sf_object: Contact
   table: Contact
