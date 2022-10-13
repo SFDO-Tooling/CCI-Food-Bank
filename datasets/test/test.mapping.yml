@@ -1,0 +1,6 @@
+Insert Account:
+  sf_object: Account
+  table: Account
+  fields:
+  - Description
+  - Name
