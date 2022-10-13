@@ -1,7 +1,7 @@
 BEGIN TRANSACTION;
 CREATE TABLE "Account" (
 	id INTEGER NOT NULL, 
-	"Fax" VARCHAR(255), 
+	"Description" VARCHAR(255), 
 	"Name" VARCHAR(255), 
 	PRIMARY KEY (id)
 );

@@ -2,5 +2,5 @@ Insert Account:
   sf_object: Account
   table: Account
   fields:
-  - Fax
+  - Description
   - Name
