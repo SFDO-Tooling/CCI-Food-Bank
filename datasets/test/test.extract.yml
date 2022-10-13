@@ -1,5 +1,6 @@
 extract:
   Account:
     fields:
-    - Name
     - Description
+    - Name
+    - AccountNumber
