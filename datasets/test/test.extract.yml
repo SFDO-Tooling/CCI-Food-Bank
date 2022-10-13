@@ -2,4 +2,4 @@ extract:
   Account:
     fields:
     - Name
-    - Description
+    - Fax

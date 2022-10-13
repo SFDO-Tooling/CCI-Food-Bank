@@ -3,4 +3,4 @@ Insert Account:
   table: Account
   fields:
   - Name
-  - Description
+  - Fax
