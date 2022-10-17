@@ -1,0 +1,20 @@
+{
+    "Description": "This is my description",
+    "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+    "IsIntegrationProcedure": false,
+    "IsMetadataCacheDisabled": false,
+    "IsOmniScriptEmbeddable": false,
+    "IsTestProcedure": false,
+    "IsWebCompEnabled": true,
+    "Language": "English",
+    "Name": "ThisIsAnOmniScript",
+    "OmniProcessElement": "Contract_SomeSubType_English_Element_Step1Customized.json",
+    "OmniProcessType": "OmniScript",
+    "PropertySetConfig": "Contract_SomeSubType_English_PropertySetConfig.json",
+    "SubType": "SomeSubType",
+    "Type": "Contract",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcess",
+    "VlocityRecordSourceKey": "OmniProcess/Contract/SomeSubType/English",
+    "WebComponentKey": "90adda14-3c16-5a95-0f5f-c3daa9082a0d"
+}
