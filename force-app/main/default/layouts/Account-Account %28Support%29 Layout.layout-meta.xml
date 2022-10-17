@@ -42,7 +42,7 @@
                 <field>Website</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Readonly</behavior>
                 <field>asdf__c</field>
             </layoutItems>
         </layoutColumns>

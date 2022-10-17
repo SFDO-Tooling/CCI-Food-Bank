@@ -3,9 +3,5 @@
     <fullName>asdf__c</fullName>
     <externalId>false</externalId>
     <label>asdf</label>
-    <length>255</length>
-    <required>false</required>
-    <trackFeedHistory>false</trackFeedHistory>
-    <type>Text</type>
-    <unique>false</unique>
+    <type>AutoNumber</type>
 </CustomField>
