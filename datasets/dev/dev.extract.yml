@@ -1,4 +1,6 @@
 extract:
   Account:
     fields:
+    - t__c
     - Name
+    - AccountNumber
