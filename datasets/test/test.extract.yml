@@ -3,4 +3,3 @@ extract:
     fields:
     - Description
     - Name
-    - AccountNumber
