@@ -1,4 +1,4 @@
-projectPath: ./Exportfile1
+# projectPath: ./Exportfile1
 queries:
     - DataRaptor
     - OmniScript
