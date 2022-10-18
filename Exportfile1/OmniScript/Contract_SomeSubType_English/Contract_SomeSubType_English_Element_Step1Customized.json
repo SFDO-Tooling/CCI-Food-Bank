@@ -34,7 +34,7 @@
             "remoteTimeout": 30000,
             "typeFilter": ""
         },
-        "label": "Step 1",
+        "label": "Step 1 hello",
         "message": {
         },
         "nextLabel": "Next",
