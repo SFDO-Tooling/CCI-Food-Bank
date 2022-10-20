@@ -1,0 +1,10 @@
+.omni-spinner-container_wrapper {
+    min-height: 200px;
+    position: relative;
+  }
+
+  .footer-message {
+    font-style: italic;
+    font-weight: 700;
+    margin-top: 10px;
+  }

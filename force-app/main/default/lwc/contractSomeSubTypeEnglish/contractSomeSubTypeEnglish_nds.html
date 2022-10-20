@@ -1,0 +1,266 @@
+<template>
+    <div dir={_dir}>
+        <template if:true={hasErrors}>
+            <lightning-layout vertical-align="stretch">
+                <lightning-layout-item flexibility="auto" padding="around-small" class="slds-text-align_center slds-p-around_small" size="1">
+                    <lightning-icon icon-name="utility:error" alternative-text="Error!" variant="error" size="large">
+                    </lightning-icon>
+                </lightning-layout-item>
+                <lightning-layout-item flexibility="auto" padding="around-small" class="custom-box">
+                    <p class="slds-text-heading_medium">{allCustomLabelsUtil.OmniScriptError}</p>
+                    <p class="bold">{_errorMsg}</p>
+                    <dl class="slds-dl_inline" if:false={_isActiveOs}>
+                        <dt class="slds-dl_inline__label"><strong>{allCustomLabelsUtil.OmniScriptType}:</strong></dt>
+                        <dd class="slds-dl_inline__detail">Contract</dd>
+                        <dt class="slds-dl_inline__label"><strong>{allCustomLabelsUtil.OmniScriptSubType}:</strong></dt>
+                        <dd class="slds-dl_inline__detail">SomeSubType</dd>
+                        <dt class="slds-dl_inline__label"><strong>{allCustomLabelsUtil.OmniScriptLang}:</strong></dt>
+                        <dd class="slds-dl_inline__detail">English</dd>
+                    </dl>
+                    <p class="footer-message">{allCustomLabelsUtil.OmniScriptNotFound2}</p>
+                </lightning-layout-item>
+            </lightning-layout>
+        </template>
+        <template if:false={hasErrors}>
+            <div class="via-nds">
+                <template if:false={compLoaded}>
+                    <div class="omni-spinner-container_wrapper">
+                        <omnistudio-spinner variant="brand"
+                                            alternative-text={allCustomLabelsUtil.OmniSpinnerTextLoading}
+                                            theme={_theme}
+                                            size="medium">
+                        </omnistudio-spinner>
+                    </div>
+                </template>
+                <template if:true={bSflValid}>
+                    <template if:true={firstRender}>
+                        <template if:true={isLauncherVisible}>
+                            <omnistudio-button label={inlineLabel}
+                                                variant={inlineVariant}
+                                                theme={_theme}
+                                                onclick={setScriptVisibility}
+                                                extraclass="nds-button_stretch">
+                            </omnistudio-button>
+                        </template>
+                        <article class={containerClasses}>
+                            <div class="nds-card__body nds-card__body_inner nds-m-top_medium">
+                                <template if:true={bSflAuto}>
+                                    <omnistudio-omniscript-save-for-later-acknowledge result={bSflResult}
+                                                    layout={layout}
+                                                    auto></omnistudio-omniscript-save-for-later-acknowledge>
+                                </template>
+                                <omnistudio-omniscript-step-chart json-def={jsonDef}
+                                            json-data={jsonDef.response}
+                                            if:false={jsonDef.propSetMap.hideStepChart}
+                                            data-omni-key='omniscriptStepChart'
+                                            props={stepChartProps}
+                                            layout={layout}
+                                            script-header-def={scriptHeaderDef}>
+                                </omnistudio-omniscript-step-chart>                    
+                                <template if:true={isPageLoading}>
+                                    <omnistudio-spinner variant="brand"
+                                                        alternative-text={allCustomLabelsUtil.OmniSpinnerTextLoading}
+                                                        extraclass="nds-theme_default"
+                                                        theme={_theme}
+                                                        message={spinnerMessage}
+                                                        size="medium">
+                                    </omnistudio-spinner>
+                                </template>
+                                <template for:each={jsonDef.children} for:item="item" for:index="idx"><omnistudio-omniscript-step if:true={item.bStep} key={item.lwcId} json-def={item} data-omni-key={item.name} json-data={jsonDef.response} json-data-str={jsonDataStr} layout={layout} resume={resume} script-header-def={scriptHeaderDef} run-mode={runMode} seed-json={jsonDef.propSetMap.seedDataJSON}></omnistudio-omniscript-step></template>
+                                <template if:true={_isKbEnabledOnScript}>
+                                <omnistudio-omniscript-knowledge-base knowledge-options={kbOptions}
+                                                             data-omni-key='omniscriptKnowledgeBase'
+                                                             layout={layout}
+                                                             data-stepchart-placement={_stepChartPlacement}
+                                                             omniscript-key={scriptHeaderDef.omniscriptKey}
+                                                             kb-label={knowledgeLabel}>
+                                </omnistudio-omniscript-knowledge-base>
+                            </template>
+                            </div>
+                            <div class="nds-m-around_small">
+                                <div class="nds-grid nds-grid_align-center">
+                                    <div class="nds-grid nds-grid_align-center nds-wrap nds-button-group-row nds-size_1-of-1 nds-medium-size_8-of-12 nds-p-horizontal_medium">
+                                        <template if:true={hasNext}>
+                                            <omnistudio-navigate-action
+                                                if:true={_isSeoEnabled}
+                                                target-type="Current Page"
+                                                class={navButton.next.classes}
+                                                use-href
+                                                target-params={navButton.next.targetParams}>
+                                                <omnistudio-button
+                                                    type="button"
+                                                    label={navButton.next.label}
+                                                    aria-label={nextStepAriaLabel}
+                                                    variant="brand"
+                                                    extraclass="slds-size_1-of-1 slds-p-horizontal_none slds-text-align_center"
+                                                    theme={_theme}>
+                                                </omnistudio-button>
+                                            </omnistudio-navigate-action>
+
+                                            <omnistudio-button
+                                                if:false={_isSeoEnabled}
+                                                type="button"
+                                                variant="brand"
+                                                onclick={nextStep}
+                                                class={navButton.next.classes}
+                                                label={navButton.next.label}
+                                                aria-label={nextStepAriaLabel}
+                                                extraclass="nds-button_stretch nds-p-around_xx-small nds-size_1-of-1"
+                                                theme={_theme}>
+                                            </omnistudio-button>
+                                        </template>
+                                    </div>
+                                </div>
+                                <div class="nds-grid nds-grid_align-center">
+                                    <div class="nds-grid nds-grid_align-center nds-wrap nds-button-group-row nds-size_1-of-1 nds-medium-size_8-of-12 nds-p-horizontal_medium">
+                                        <template if:true={hasPrev}>
+                                            <omnistudio-navigate-action
+                                                if:true={_isSeoEnabled}
+                                                target-type="Current Page"
+                                                use-href
+                                                class={navButton.previous.classes}
+                                                target-params={navButton.previous.targetParams}>
+                                                <omnistudio-button
+                                                    type="button"
+                                                    variant="neutral"
+                                                    label={navButton.previous.label}
+                                                    aria-label={prevStepAriaLabel}
+                                                    extraclass="nds-button_stretch nds-p-around_xx-small nds-size_1-of-1"
+                                                    theme={_theme}>
+                                                </omnistudio-button>
+                                            </omnistudio-navigate-action>
+
+                                            <omnistudio-button
+                                                if:false={_isSeoEnabled}
+                                                type="button"
+                                                variant="neutral"
+                                                onclick={prevStep}
+                                                label={navButton.previous.label}
+                                                aria-label={prevStepAriaLabel}
+                                                class={navButton.previous.classes}
+                                                extraclass="nds-button_stretch nds-p-around_xx-small nds-size_1-of-1"
+                                                theme={_theme}>
+                                            </omnistudio-button>
+                                        </template>
+                                    </div>
+                                </div>
+                                <div class="nds-grid nds-grid_align-center">
+                                    <div class="nds-grid nds-grid_align-center nds-wrap nds-button-group-row nds-size_1-of-1 nds-medium-size_8-of-12 nds-p-horizontal_medium">
+
+                                        <template if:true={cancelAction}>
+                                            <omnistudio-button type="button"
+                                                    label={cancelLabel}
+                                                    variant="base"
+                                                    class={navButton.save.classes}
+                                                    extraclass="nds-button_stretch nds-p-around_xx-small nds-size_1-of-1"
+                                                    onclick={cancel}
+                                                    theme={_theme}>
+                                            </omnistudio-button>
+                                        </template>
+                                        <omnistudio-navigate-action
+                                            data-omni-key="DEFAULT-CANCEL"
+                                            target-type={_defaultCancel.type}
+                                            target-params={_defaultCancel.params}>
+                                        </omnistudio-navigate-action>
+
+                                        <template if:true={allowSfl}>
+                                            <omnistudio-button type="button"
+                                                                variant="base"
+                                                                onclick={saveForLater}
+                                                                class={navButton.save.classes}
+                                                                label={navButton.save.label}
+                                                                extraclass="nds-button_stretch nds-p-around_xx-small nds-size_1-of-1"
+                                                                theme={_theme}>
+                                            </omnistudio-button>
+                                        </template>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <template if:true={bSflComplete}>
+                            <omnistudio-omniscript-save-for-later-acknowledge result={bSflResult} layout={layout}></omnistudio-omniscript-save-for-later-acknowledge>
+                        </template>
+                        <template for:each={modalEvents}
+                                for:item="modallvl1"
+                                for:index="indexlvl1">
+                            <omnistudio-omniscript-modal data-omni-key='omnimodal'
+                                    key={modallvl1.modalHeader}
+                                    type={modallvl1.type}
+                                    layout={layout}
+                                    triggered-on-step={modallvl1.triggeredOnStep}
+                                    hide-footer={modallvl1.hideFooter}
+                                    hide-header={modallvl1.hideHeader}>
+                                <div slot="header">
+                                    <h1>{modallvl1.modalHeader}</h1>
+                                </div>
+                                <div slot="content">
+                                    <omnistudio-omniscript-formatted-rich-text value={modallvl1.modalMessage} disable-linkify></omnistudio-omniscript-formatted-rich-text>
+                                </div>
+                                <div slot="footer">
+                                    <ul class="slds-button-group-row">
+                                        <template for:each={modallvl1.buttons}
+                                                for:item="modalbutton"
+                                                for:index="modalbuttonindex">
+                                            <template if:true={modalbutton.label}>
+                                                <li class="slds-button-group-item"
+                                                    key={modalbutton.key}>
+                                                    <lightning-button label={modalbutton.label}
+                                                                    value={indexlvl1}
+                                                                    onclick={modalbutton.handleClick}>
+                                                    </lightning-button>
+                                                </li>
+                                            </template>
+                                        </template>
+                                    </ul>
+                                </div>
+                            </omnistudio-omniscript-modal>
+                        </template>
+                    </template>
+                </template>
+                <template if:false={bSflValid}>
+                    <div class="nds-grid nds-wrap nds-gutters nds-p-horizontal_medium">
+                        <div class="nds-col nds-size_12-of-12 nds-medium-size_2-of-12"></div>
+                        <div class="nds-col nds-size_12-of-12 nds-medium-size_8-of-12">
+                            <div class='nds-card omniscript-save-for-later'>
+                                <div class="nds-card__header nds-grid">
+                                    <header class="nds-media nds-media_center nds-has-flexi-truncate">
+                                        <div class="nds-media__figure">
+                                            <lightning-icon icon-name="utility:warning"
+                                                            alternative-text="Ok"
+                                                            size="large"></lightning-icon>
+                                        </div>
+                                        <div class="nds-media__body">
+                                            <h2 class="nds-card__header-title">
+                                                <span class="nds-text-heading_large">{allCustomLabelsUtil.OmniInvalidLwcComponent}</span>
+                                            </h2>
+                                        </div>
+                                    </header>
+                                </div>
+                                <div class='nds-card__body nds-card__body_inner'>
+                                    <p class="bold">{allCustomLabelsUtil.OmniInvalidLwcComponentMessage}</p>
+                                    <p>&nbsp;</p>
+                                    <div class="nds-m-around_small">
+                                        <div class="nds-grid">
+                                            <div class="nds-grid nds-wrap nds-button-group-row nds-size_1-of-1 nds-medium-size_8-of-12 nds-p-horizontal_medium">
+                                                    <omnistudio-button type="button"
+                                                                        variant="brand"
+                                                                        onclick={handleContinueInvalidSfl}
+                                                                        label={allCustomLabelsUtil.OmniContinue}
+                                                                        class="nds-m-left_x-small"
+                                                                        extraclass="nds-button_stretch nds-p-around_xx-small nds-size_1-of-1"
+                                                                        theme={_theme}>
+                                                    </omnistudio-button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nds-col nds-size_12-of-12 nds-medium-size_2-of-12"></div>
+                    </div>
+                </template>
+            </div>
+        </template>
+    </div>
+</template>
