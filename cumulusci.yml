@@ -44,6 +44,14 @@ flows:
             4:
                 flow: omni:install_omnistudio
 
+    test_omni:
+        steps:
+            1: 
+                flow: omni_org
+            2:
+                task: vlocity_pack_deploy
+                options:
+                    job_file: job.yaml
 orgs:
     scratch:
         trial:
