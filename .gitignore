@@ -21,3 +21,7 @@ robot/CCI-Food-Bank/results/
 
 # Misc
 .DS_Store
+
+vlocity-temp
+VlocityBuildErrors.log
+VlocityBuildLog.yaml
