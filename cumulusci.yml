@@ -60,7 +60,10 @@ orgs:
             config_file: orgs/omni.json
             setup_flow: omni_org
             days: 7
-
+        test_omni:
+            config_file: orgs/omni.json
+            setup_flow: test_omni
+            days: 7
 plans:
     install:
         slug: install
