@@ -21,3 +21,9 @@ robot/CCI-Food-Bank/results/
 
 # Misc
 .DS_Store
+
+# Omnistudio Files
+vlocity-temp
+VlocityBuildErrors.log
+VlocityBuildLog.yaml
+.sf
