@@ -1,0 +1,52 @@
+{
+    "dataSource": {
+        "contextVariables": [],
+        "orderBy": {},
+        "type": null,
+        "value": {}
+    },
+    "enableLwc": true,
+    "isFlex": true,
+    "selectableMode": "Multi",
+    "states": [
+        {
+            "conditions": {
+                "group": [],
+                "id": "state-condition-object",
+                "isParent": true
+            },
+            "definedActions": {
+                "actions": []
+            },
+            "fields": [],
+            "isSmartAction": false,
+            "name": "Active",
+            "smartAction": {},
+            "styleObject": {
+                "class": "slds-card slds-p-around_x-small slds-m-bottom_x-small",
+                "container": {
+                    "class": "slds-card"
+                },
+                "margin": [
+                    {
+                        "size": "x-small",
+                        "type": "bottom"
+                    }
+                ],
+                "padding": [
+                    {
+                        "size": "x-small",
+                        "type": "around"
+                    }
+                ],
+                "size": {
+                    "default": "12",
+                    "isResponsive": false
+                },
+                "sizeClass": "slds-size_12-of-12"
+            }
+        }
+    ],
+    "theme": "slds",
+    "title": "test"
+}
