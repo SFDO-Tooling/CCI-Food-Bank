@@ -1,0 +1,25 @@
+{
+    "AuthorName": "test",
+    "ClonedFromOmniUiCardKey": "",
+    "DataSourceConfig": {
+        "contextVariables": [],
+        "orderBy": {},
+        "type": null,
+        "value": {}
+    },
+    "Description": "",
+    "IsTrackingEnabled": false,
+    "Name": "test",
+    "Namespace": "",
+    "OmniUiCardKey": "test/test/1.0",
+    "OmniUiCardType": "Parent",
+    "OverrideKey": "",
+    "PropertySetConfig": "test.json",
+    "SampleDataSourceResponse": "",
+    "StylingConfiguration": "",
+    "UniqueName": "",
+    "VersionNumber": 1,
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniUiCard",
+    "VlocityRecordSourceKey": "OmniUiCard/test"
+}
