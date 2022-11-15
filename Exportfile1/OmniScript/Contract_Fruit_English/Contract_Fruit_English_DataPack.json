@@ -1,0 +1,20 @@
+{
+    "Description": "This is a contract for a Banana",
+    "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+    "IsIntegrationProcedure": false,
+    "IsMetadataCacheDisabled": false,
+    "IsOmniScriptEmbeddable": false,
+    "IsTestProcedure": false,
+    "IsWebCompEnabled": true,
+    "Language": "English",
+    "Name": "Banana",
+    "OmniProcessElement": "Contract_Fruit_English_Element_Step1.json",
+    "OmniProcessType": "OmniScript",
+    "PropertySetConfig": "Contract_Fruit_English_PropertySetConfig.json",
+    "SubType": "Fruit",
+    "Type": "Contract",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcess",
+    "VlocityRecordSourceKey": "OmniProcess/Contract/Fruit/English",
+    "WebComponentKey": "98963b55-5eed-6227-90df-1a7afb53dea3"
+}
