@@ -38,9 +38,9 @@ flows:
                 options:
                     records:
                         - full_name: MetaDeploy
-                            decription: This is where you install things from Salesforce.org
-                            url: https://install.salesforce.org
-                            is_active: True
+                          decription: This is where you install things from Salesforce.org
+                          url: https://install.salesforce.org
+                          is_active: True
 
     config_qa:
         steps:
