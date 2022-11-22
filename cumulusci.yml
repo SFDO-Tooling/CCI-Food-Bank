@@ -36,7 +36,8 @@ flows:
             30:
               task: add_remote_site_settings
                   options:
-                      full_name: banana
+                      full_name: MetaDeploy
+                      url: https://install.salesforce.org
                       is_active: True
                       
 
