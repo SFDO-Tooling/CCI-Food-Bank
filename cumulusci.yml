@@ -31,6 +31,15 @@ tasks:
             path: unpackaged/config/qa
 
 flows:
+    config_dev:
+        steps:
+            30:
+              task: add_remote_site_settings
+                  options:
+                      full_name: banana
+                      is_active: True
+                      
+
     config_qa:
         steps:
             3:
