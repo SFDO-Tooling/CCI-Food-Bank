@@ -35,13 +35,12 @@ flows:
         steps:
             30:
                 task: add_remote_site_settings
-                    options:
-                        records:
-                            - full_name: MetaDeploy
-                              decription: This is where you install things from Salesforce.org
-                              url: https://install.salesforce.org
-                              is_active: True
-                      
+                options:
+                    records:
+                        - full_name: MetaDeploy
+                            decription: This is where you install things from Salesforce.org
+                            url: https://install.salesforce.org
+                            is_active: True
 
     config_qa:
         steps:
