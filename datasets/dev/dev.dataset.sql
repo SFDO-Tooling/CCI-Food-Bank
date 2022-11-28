@@ -53,6 +53,25 @@ CREATE TABLE "DandBCompany" (
 	"Name" VARCHAR(255), 
 	PRIMARY KEY (id)
 );
+CREATE TABLE "Delivery_Item__c" (
+	id INTEGER NOT NULL, 
+	"Description__c" VARCHAR(255), 
+	"DjFoodBankID__c" VARCHAR(255), 
+	"Storage_Requirements__c" VARCHAR(255), 
+	"Delivery__c" VARCHAR(255), 
+	PRIMARY KEY (id)
+);
+INSERT INTO "Delivery_Item__c" VALUES(1,'100 jars of salsa','','Refrigerated','1');
+CREATE TABLE "Delivery__c" (
+	id INTEGER NOT NULL, 
+	"DjFoodBankID__c" VARCHAR(255), 
+	"Notes__c" VARCHAR(255), 
+	"Scheduled_Date__c" VARCHAR(255), 
+	"Status__c" VARCHAR(255), 
+	"Supplier__c" VARCHAR(255), 
+	PRIMARY KEY (id)
+);
+INSERT INTO "Delivery__c" VALUES(1,'','','2022-11-30','Scheduled','1');
 CREATE TABLE "OperatingHours" (
 	id INTEGER NOT NULL, 
 	"Name" VARCHAR(255), 

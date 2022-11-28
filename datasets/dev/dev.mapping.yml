@@ -65,3 +65,26 @@ Insert Account:
       table: Account
       key_field: ParentId
       after: Insert Account
+Insert Delivery__c:
+  sf_object: Delivery__c
+  table: Delivery__c
+  fields:
+  - DjFoodBankID__c
+  - Notes__c
+  - Scheduled_Date__c
+  - Status__c
+  lookups:
+    Supplier__c:
+      table: Account
+      key_field: Supplier__c
+Insert Delivery_Item__c:
+  sf_object: Delivery_Item__c
+  table: Delivery_Item__c
+  fields:
+  - Description__c
+  - DjFoodBankID__c
+  - Storage_Requirements__c
+  lookups:
+    Delivery__c:
+      table: Delivery__c
+      key_field: Delivery__c

@@ -52,3 +52,16 @@ extract:
     fields:
     - Name
     - TimeZone
+  Delivery__c:
+    fields:
+    - DjFoodBankID__c
+    - Notes__c
+    - Scheduled_Date__c
+    - Status__c
+    - Supplier__c
+  Delivery_Item__c:
+    fields:
+    - Delivery__c
+    - Description__c
+    - DjFoodBankID__c
+    - Storage_Requirements__c
