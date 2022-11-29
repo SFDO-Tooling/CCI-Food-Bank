@@ -67,9 +67,19 @@ orgs:
 plans:
     install:
         slug: install
-        title: Install CCI Food Bank
+        title: Install Food Bank Cloud
         tier: primary
         is_listed: True
         steps:
             1:
-                flow: install_prod
+              task: deploy
+              ui_options:
+                name: "Deploy Trial Experience"
+            2:
+              task: load_dataset
+              options:
+                sql_path: datasets/dev/dev.dataset.sql
+                mapping: datasets/dev/dev.mapping.yml
+              ui_options:
+                name: "Load Sample Data"
+                required: False
