@@ -1,9 +1,9 @@
 {
   "orgName": "CumulusCI Food Bank Demo - Dev Org",
   "edition": "Developer",
-  "settings" {
+  "settings": {
       "languageSettings": {
-      "enableTranslationWorkbench": true
+        "enableTranslationWorkbench": true
     }
   }
 }
