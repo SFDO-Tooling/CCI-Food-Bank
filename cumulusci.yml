@@ -76,10 +76,14 @@ plans:
               ui_options:
                 name: "Deploy Trial Experience"
             2:
+              task: update_admin_profile
+              ui_options:
+                name: "Grant Access to Admin Profile"
+            3:
               task: load_dataset
               options:
                 sql_path: datasets/dev/dev.dataset.sql
                 mapping: datasets/dev/dev.mapping.yml
               ui_options:
                 name: "Load Sample Data"
-                required: False
+                is_required: False
