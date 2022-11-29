@@ -31,6 +31,17 @@ tasks:
             path: unpackaged/config/qa
 
 flows:
+    config_dev:
+        steps:
+            30:
+                task: add_remote_site_settings
+                options:
+                    records:
+                        - full_name: MetaDeploy
+                          description: This is where you install things from Salesforce.org
+                          url: https://install.salesforce.org
+                          is_active: True
+
     config_qa:
         steps:
             3:
@@ -73,3 +84,5 @@ plans:
         steps:
             1:
                 flow: install_prod
+
+
