@@ -1,0 +1,19 @@
+Insert DandBCompany:
+  sf_object: DandBCompany
+  table: DandBCompany
+  fields:
+  - DunsNumber
+  - Name
+Insert OperatingHours:
+  sf_object: OperatingHours
+  table: OperatingHours
+  fields:
+  - Name
+  - TimeZone
+Insert Account:
+  sf_object: Account
+  table: Account
+  fields:
+  - Description
+  - Name
+  - Phone
