@@ -5,3 +5,10 @@ Insert Account:
   - Description
   - Name
   - Phone
+Insert ContentAsset:
+  sf_object: ContentAsset
+  table: ContentAsset
+  fields:
+  - MasterLabel
+  - DeveloperName
+  - IsVisibleByExternalUsers

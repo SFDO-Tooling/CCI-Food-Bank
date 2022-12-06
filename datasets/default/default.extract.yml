@@ -4,3 +4,6 @@ extract:
     - Description
     - Name
     - Phone
+  ContentAsset:
+    fields:
+    - MasterLabel
