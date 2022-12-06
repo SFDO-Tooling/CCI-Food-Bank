@@ -1,0 +1,14 @@
+extract:
+  DandBCompany:
+    fields:
+    - DunsNumber
+    - Name
+  OperatingHours:
+    fields:
+    - Name
+    - TimeZone
+  Account:
+    fields:
+    - Description
+    - Name
+    - Phone
