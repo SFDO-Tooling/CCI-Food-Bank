@@ -30,6 +30,7 @@ extract:
     - OperatingHoursId
     - Ownership
     - ParentId
+    - RecordTypeId
     - ShippingCity
     - ShippingCountry
     - ShippingGeocodeAccuracy

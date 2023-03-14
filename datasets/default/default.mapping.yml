@@ -54,6 +54,7 @@ Insert Account:
   - Tradestyle
   - Website
   - YearStarted
+  - RecordTypeId
   lookups:
     DandbCompanyId:
       table: DandBCompany

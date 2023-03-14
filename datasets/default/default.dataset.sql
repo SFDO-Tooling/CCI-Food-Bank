@@ -27,6 +27,7 @@ CREATE TABLE "Account" (
 	"NaicsCode" VARCHAR(255), 
 	"NaicsDesc" VARCHAR(255), 
 	"Ownership" VARCHAR(255), 
+	"RecordTypeId" VARCHAR(255), 
 	"ShippingCity" VARCHAR(255), 
 	"ShippingCountry" VARCHAR(255), 
 	"ShippingGeocodeAccuracy" VARCHAR(255), 
@@ -46,7 +47,13 @@ CREATE TABLE "Account" (
 	"ParentId" VARCHAR(255), 
 	PRIMARY KEY (id)
 );
-INSERT INTO "Account" VALUES(1,'','','Test','','','','','','','','','','','','','','','','Pending','','','','','','','','','','','','','','','','','','','','','','','','');
+INSERT INTO "Account" VALUES(1,'','','Test','','','','','','','','','','','','','','','','Pending','','','','','','','','','','','','','','','','','','','','','','','','','');
+CREATE TABLE "Account_rt_mapping" (
+	record_type_id VARCHAR(18) NOT NULL, 
+	developer_name VARCHAR(255), 
+	PRIMARY KEY (record_type_id)
+);
+INSERT INTO "Account_rt_mapping" VALUES('012Da000003rj3fIAA','Foo_Type');
 CREATE TABLE "DandBCompany" (
 	id INTEGER NOT NULL, 
 	"DunsNumber" VARCHAR(255), 
