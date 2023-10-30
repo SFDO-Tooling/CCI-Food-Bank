@@ -48,6 +48,9 @@ CREATE TABLE "Account" (
 	PRIMARY KEY (id)
 );
 INSERT INTO "Account" VALUES(1,'','','JawadTP','','','','','','','','','','','','','','','','Pending','','','','','','','','','','','','','','','','','','','','','','','','','');
+
+INSERT INTO "Account" VALUES(1,'','','DeployedAcc','','','','','','','','','','','','','','','','Pending','','','','','','','','','','','','','','','','','','','','','','','','','');
+
 CREATE TABLE "Asset" (
 	id INTEGER NOT NULL, 
 	"Name" VARCHAR(255), 
