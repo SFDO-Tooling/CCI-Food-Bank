@@ -47,6 +47,7 @@ CREATE TABLE "Account" (
 	"ParentId" VARCHAR(255), 
 	PRIMARY KEY (id)
 );
+INSERT INTO "Account" VALUES(1,'','','JawadTP','','','','','','','','','','','','','','','','Pending','','','','','','','','','','','','','','','','','','','','','','','','','');
 CREATE TABLE "Asset" (
 	id INTEGER NOT NULL, 
 	"Name" VARCHAR(255), 
