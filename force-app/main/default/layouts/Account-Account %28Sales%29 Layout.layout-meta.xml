@@ -49,6 +49,10 @@
                 <behavior>Edit</behavior>
                 <field>demo__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>dry_run__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
