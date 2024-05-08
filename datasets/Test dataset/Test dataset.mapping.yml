@@ -29,6 +29,28 @@ Insert WorkBadgeDefinition:
   - LimitNumber
   - IsLimitPerUser
   - LimitStartDate
+Insert BusinessHours:
+  sf_object: BusinessHours
+  table: BusinessHours
+  fields:
+  - IsActive
+  - Name
+  - IsDefault
+  - FridayEndTime
+  - FridayStartTime
+  - MondayEndTime
+  - MondayStartTime
+  - SaturdayEndTime
+  - SaturdayStartTime
+  - SundayEndTime
+  - SundayStartTime
+  - ThursdayEndTime
+  - ThursdayStartTime
+  - TimeZoneSidKey
+  - TuesdayEndTime
+  - TuesdayStartTime
+  - WednesdayEndTime
+  - WednesdayStartTime
 Insert Account:
   sf_object: Account
   table: Account

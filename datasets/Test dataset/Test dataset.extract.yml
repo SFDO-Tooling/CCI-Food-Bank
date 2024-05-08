@@ -62,3 +62,23 @@ extract:
     - LimitNumber
     - IsLimitPerUser
     - LimitStartDate
+  BusinessHours:
+    fields:
+    - IsActive
+    - Name
+    - IsDefault
+    - FridayEndTime
+    - FridayStartTime
+    - MondayEndTime
+    - MondayStartTime
+    - SaturdayEndTime
+    - SaturdayStartTime
+    - SundayEndTime
+    - SundayStartTime
+    - ThursdayEndTime
+    - ThursdayStartTime
+    - TimeZoneSidKey
+    - TuesdayEndTime
+    - TuesdayStartTime
+    - WednesdayEndTime
+    - WednesdayStartTime

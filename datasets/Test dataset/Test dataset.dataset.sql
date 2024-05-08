@@ -46,6 +46,28 @@ CREATE TABLE "Account" (
 	"ParentId" VARCHAR(255), 
 	PRIMARY KEY (id)
 );
+CREATE TABLE "BusinessHours" (
+	id VARCHAR(255) NOT NULL, 
+	"IsActive" VARCHAR(255), 
+	"Name" VARCHAR(255), 
+	"IsDefault" VARCHAR(255), 
+	"FridayEndTime" VARCHAR(255), 
+	"FridayStartTime" VARCHAR(255), 
+	"MondayEndTime" VARCHAR(255), 
+	"MondayStartTime" VARCHAR(255), 
+	"SaturdayEndTime" VARCHAR(255), 
+	"SaturdayStartTime" VARCHAR(255), 
+	"SundayEndTime" VARCHAR(255), 
+	"SundayStartTime" VARCHAR(255), 
+	"ThursdayEndTime" VARCHAR(255), 
+	"ThursdayStartTime" VARCHAR(255), 
+	"TimeZoneSidKey" VARCHAR(255), 
+	"TuesdayEndTime" VARCHAR(255), 
+	"TuesdayStartTime" VARCHAR(255), 
+	"WednesdayEndTime" VARCHAR(255), 
+	"WednesdayStartTime" VARCHAR(255), 
+	PRIMARY KEY (id)
+);
 CREATE TABLE "DandBCompany" (
 	id VARCHAR(255) NOT NULL, 
 	"DunsNumber" VARCHAR(255), 
