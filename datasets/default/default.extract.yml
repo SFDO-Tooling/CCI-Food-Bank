@@ -52,17 +52,3 @@ extract:
     fields:
     - Name
     - TimeZone
-  WorkBadgeDefinition:
-    fields:
-    - IsActive
-    - Name
-    - IsCompanyWide
-    - Description
-    - ImageUrl
-    - LimitNumber
-    - IsLimitPerUser
-    - LimitStartDate
-  BrandTemplate:
-    fields:
-    - Name
-    - Value

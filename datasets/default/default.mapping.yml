@@ -17,24 +17,6 @@ Insert OperatingHours:
   fields:
   - Name
   - TimeZone
-Insert WorkBadgeDefinition:
-  sf_object: WorkBadgeDefinition
-  table: WorkBadgeDefinition
-  fields:
-  - IsActive
-  - Name
-  - IsCompanyWide
-  - Description
-  - ImageUrl
-  - LimitNumber
-  - IsLimitPerUser
-  - LimitStartDate
-Insert BrandTemplate:
-  sf_object: BrandTemplate
-  table: BrandTemplate
-  fields:
-  - Name
-  - Value
 Insert Account:
   sf_object: Account
   table: Account

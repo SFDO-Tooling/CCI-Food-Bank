@@ -46,12 +46,7 @@ CREATE TABLE "Account" (
 	"ParentId" VARCHAR(255), 
 	PRIMARY KEY (id)
 );
-CREATE TABLE "BrandTemplate" (
-	id VARCHAR(255) NOT NULL, 
-	"Name" VARCHAR(255), 
-	"Value" VARCHAR(255), 
-	PRIMARY KEY (id)
-);
+INSERT INTO "Account" VALUES('Account-1','','','Jawad tp','','','','','','','','','','','','','','','','Pending','','','','','','','','','','','','','','','','','','','','','','','','');
 CREATE TABLE "DandBCompany" (
 	id VARCHAR(255) NOT NULL, 
 	"DunsNumber" VARCHAR(255), 
@@ -62,18 +57,6 @@ CREATE TABLE "OperatingHours" (
 	id VARCHAR(255) NOT NULL, 
 	"Name" VARCHAR(255), 
 	"TimeZone" VARCHAR(255), 
-	PRIMARY KEY (id)
-);
-CREATE TABLE "WorkBadgeDefinition" (
-	id VARCHAR(255) NOT NULL, 
-	"IsActive" VARCHAR(255), 
-	"Name" VARCHAR(255), 
-	"IsCompanyWide" VARCHAR(255), 
-	"Description" VARCHAR(255), 
-	"ImageUrl" VARCHAR(255), 
-	"LimitNumber" VARCHAR(255), 
-	"IsLimitPerUser" VARCHAR(255), 
-	"LimitStartDate" VARCHAR(255), 
 	PRIMARY KEY (id)
 );
 COMMIT;
