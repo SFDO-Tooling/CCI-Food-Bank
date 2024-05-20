@@ -59,4 +59,16 @@ CREATE TABLE "OperatingHours" (
 	"TimeZone" VARCHAR(255), 
 	PRIMARY KEY (id)
 );
+CREATE TABLE "WorkBadgeDefinition" (
+	id VARCHAR(255) NOT NULL, 
+	"IsActive" VARCHAR(255), 
+	"Name" VARCHAR(255), 
+	"IsCompanyWide" VARCHAR(255), 
+	"Description" VARCHAR(255), 
+	"ImageUrl" VARCHAR(255), 
+	"LimitNumber" VARCHAR(255), 
+	"IsLimitPerUser" VARCHAR(255), 
+	"LimitStartDate" VARCHAR(255), 
+	PRIMARY KEY (id)
+);
 COMMIT;
