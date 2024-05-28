@@ -35,8 +35,6 @@ flows:
         steps:
             3:
                 task: load_dataset
-            4:
-                task: deploy_qa
     omni_org:
         steps:
             3:
