@@ -34,7 +34,7 @@ flows:
     config_qa:
         steps:
             3:
-                flow: omni_org
+                task: vlocity_pack_deploy
     omni_org:
         steps:
             3:
