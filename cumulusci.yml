@@ -34,7 +34,7 @@ flows:
     config_qa:
         steps:
             3:
-                task: load_dataset
+                flow: omni_org
     omni_org:
         steps:
             3:
