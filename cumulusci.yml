@@ -51,7 +51,11 @@ flows:
             3:
                 task: assign_permission_sets
                 options:
-                    api_names: alpha,beta
+                    api_names: alpha,beta,gamma
+            4:
+                task: assign_permission_set_licenses
+                options:
+                    api_names: delta,exta
 orgs:
     scratch:
         trial:
