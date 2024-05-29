@@ -1,74 +1,74 @@
 minimum_cumulusci_version: 3.1.0
 project:
-name: CCI-Food-Bank
-package:
-	name: CumulusCI Food Bank Demo
-	namespace: ccifb1
-	api_version: '47.0'
-source_format: sfdx
-git:
-	repo_url: https://github.com/SFDO-Tooling/CCI-Food-Bank
+    name: CCI-Food-Bank
+    package:
+        name: CumulusCI Food Bank Demo
+        namespace: ccifb1
+        api_version: '47.0'
+    source_format: sfdx
+    git:
+        repo_url: https://github.com/SFDO-Tooling/CCI-Food-Bank
 sources:
-omni:
-	github: https://github.com/SalesforceFoundation/omni-cci
+    omni:
+        github: https://github.com/SalesforceFoundation/omni-cci
 tasks:
-robot:
-	options:
-	suites: robot/CCI-Food-Bank/tests
-	options:
-		outputdir: robot/CCI-Food-Bank/results
-robot_testdoc:
-	options:
-	path: robot/CCI-Food-Bank/tests
-	output: robot/CCI-Food-Bank/doc/CCI-Food-Bank_tests.html
-deploy_qa:
-	class_path: cumulusci.tasks.salesforce.Deploy
-	options:
-	path: unpackaged/config/qa
+    robot:
+        options:
+            suites: robot/CCI-Food-Bank/tests
+            options:
+                outputdir: robot/CCI-Food-Bank/results
+    robot_testdoc:
+        options:
+            path: robot/CCI-Food-Bank/tests
+            output: robot/CCI-Food-Bank/doc/CCI-Food-Bank_tests.html
+    deploy_qa:
+        class_path: cumulusci.tasks.salesforce.Deploy
+        options:
+            path: unpackaged/config/qa
 flows:
-config_qa:
-	steps:
-	3:
-		task: load_dataset
-	4:
-		task: deploy_qa
-omni_org:
-	steps:
-	3:
-		flow: dev_org
-	4:
-		flow: omni:install_omnistudio
-test_omni:
-	steps:
-	1:
-		flow: omni_org
-	2:
-		task: vlocity_pack_deploy
-		options:
-		job_file: job.yaml
-dependencies:
-	steps:
-	3:
-		task: assign_permission_sets
-		options: alpha,beta
+    config_qa:
+        steps:
+            3:
+                task: load_dataset
+            4:
+                task: deploy_qa
+    omni_org:
+        steps:
+            3:
+                flow: dev_org
+            4:
+                flow: omni:install_omnistudio
+    test_omni:
+        steps:
+            1:
+                flow: omni_org
+            2:
+                task: vlocity_pack_deploy
+                options:
+                    job_file: job.yaml
+    dependencies:
+        steps:
+            3:
+                task: assign_permission_sets
+                options: alpha,beta
 orgs:
-scratch:
-	trial:
-	config_file: orgs/trial.json
-	omni:
-	config_file: orgs/omni.json
-	setup_flow: omni_org
-	days: 7
-	test_omni:
-	config_file: orgs/omni.json
-	setup_flow: test_omni
-	days: 7
+    scratch:
+        trial:
+            config_file: orgs/trial.json
+        omni:
+            config_file: orgs/omni.json
+            setup_flow: omni_org
+            days: 7
+        test_omni:
+            config_file: orgs/omni.json
+            setup_flow: test_omni
+            days: 7
 plans:
-install:
-	slug: install
-	title: Install CCI Food Bank
-	tier: primary
-	is_listed: true
-	steps:
-	1:
-		flow: install_prod
+    install:
+        slug: install
+        title: Install CCI Food Bank
+        tier: primary
+        is_listed: true
+        steps:
+            1:
+                flow: install_prod
