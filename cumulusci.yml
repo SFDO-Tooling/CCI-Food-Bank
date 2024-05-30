@@ -310,8 +310,8 @@ flows:
             3:
                 task: assign_permission_sets
                 options:
-                    api_names: alpha,beta,easter,gamma
+                    api_names: alpha,beta,easter,gamma,twinkle
             4:
                 task: assign_permission_set_licenses
                 options:
-                    api_names: delta,elsaaa,exta,extrasss,king
+                    api_names: delta,eateries,elsaaa,exta,extrasss,king
