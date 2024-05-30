@@ -1,4 +1,4 @@
-minimum_cumulusci_version: '3.84.3'
+minimum_cumulusci_version: 3.84.3
 orgs:
     scratch:
         beta:
@@ -16,138 +16,126 @@ orgs:
         tfid-dev:
             config_file: orgs/tfid-dev.json
             days: 30
-
 project:
     name: rlm-base
     package:
         name: rlm-base
         api_version: '61.0'
     git:
-        default_branch: 'main'
+        default_branch: main
     source_format: sfdx
-
     custom:
-        rlm_psl_api_names: &rlm_psl_api_names
-            - RevenueLifecycleManagementUserPsl
-            - OmniStudioDesigner
-            - CorePricingDesignTime
-            - BREDesigner
-            - DocGenDesignerPsl
-            - ClauseManagementUser
-            - ProductCatalogManagementAdministratorPsl
-            - ContractManagementUser
-            - ProductDiscoveryUserPsl
-            - BRERuntime
-            - IndustriesConfiguratorPsl
-            - ObligationManagementUser
-            - Microsoft365WordPsl
-            - DynamicRevenueOrchestratorUserPsl
-            - DocumentBuilderUserPsl
-
-        rlm_pcm_ps_api_names: &rlm_pcm_ps_api_names
-            - IndustriesConfiguratorPlatformApi
-            - ProductConfigurationRulesDesigner
-            - ProductCatalogManagementAdministrator
-            - ProductCatalogManagementViewer
-
-        rlm_psg_api_names: &rlm_psg_api_names
-            - RLM_PSL
-            - RLM_NGP
-            - RLM_PD
-            - RLM_CLM
-            - RLM_DRO
-
-        sales_transaction_context_name: &sales_transaction_context_name
-            RLM_SalesTransactionContext
-
-        product_discovery_context_name: &product_discovery_context_name
-            RLM_ProductDiscoveryContext
-
-        create_partner_community: true
-
-        sleep_default: &sleep_default
-            20
-
+        rlm_psl_api_names: &id001
+        - RevenueLifecycleManagementUserPsl
+        - OmniStudioDesigner
+        - CorePricingDesignTime
+        - BREDesigner
+        - DocGenDesignerPsl
+        - ClauseManagementUser
+        - ProductCatalogManagementAdministratorPsl
+        - ContractManagementUser
+        - ProductDiscoveryUserPsl
+        - BRERuntime
+        - IndustriesConfiguratorPsl
+        - ObligationManagementUser
+        - Microsoft365WordPsl
+        - DynamicRevenueOrchestratorUserPsl
+        - DocumentBuilderUserPsl
+        rlm_pcm_ps_api_names: &id003
+        - IndustriesConfiguratorPlatformApi
+        - ProductConfigurationRulesDesigner
+        - ProductCatalogManagementAdministrator
+        - ProductCatalogManagementViewer
+        rlm_psg_api_names: &id002
+        - RLM_PSL
+        - RLM_NGP
+        - RLM_PD
+        - RLM_CLM
+        - RLM_DRO
+        sales_transaction_context_name: RLM_SalesTransactionContext
+        product_discovery_context_name: RLM_ProductDiscoveryContext
+        create_partner_community: True
+        sleep_default: 20
 tasks:
     robot:
         options:
             suites: robot/rlm-base/tests
             options:
                 outputdir: robot/rlm-base/results
-
     robot_testdoc:
         options:
             path: robot/rlm-base/tests
             output: robot/rlm-base/doc/rlm-base_tests.html
-
     run_tests:
         options:
             required_org_code_coverage_percent: 75
-
     sync_pricing_data:
         description: Sync Pricing Data
         class_path: tasks.rlm_sync_pricing_data.SyncPricingData
         group: Revenue Lifecycle Management
-    
     extend_stdctx:
         description: Extend Standard Sales Transaction Context Definition
         class_path: tasks.extend_stdctx.ExtendStandardContext
         group: Revenue Lifecycle Management
-
     extend_stdctx_pd:
         description: Extend Standard Product Discovery Context Definition
         class_path: tasks.extend_stdctx_pd.ExtendStandardContextPd
         group: Revenue Lifecycle Management
-
     extend_stdctx_cart:
         description: Extend Standard Cart Context Definition
         class_path: tasks.extend_stdctx_cart.ExtendStandardContextCart
         group: Revenue Lifecycle Management
-
     deploy_permissions:
-        description: Runs deployment against the permission set group file for Revenue Cloud.
+        description: Runs deployment against the permission set group file for Revenue
+            Cloud.
         class_path: cumulusci.tasks.salesforce.Deploy
         group: Revenue Lifecycle Management
         options:
             path: force-app/main/default/permissionsetgroups
-  
     deploy_decision_tables:
-        description: Decision Tables are required to be deployed first before other metadata -- this prioritizes this deployment first
+        description: Decision Tables are required to be deployed first before other
+            metadata -- this prioritizes this deployment first
         class_path: cumulusci.tasks.salesforce.Deploy
         group: Revenue Lifecycle Management
         options:
             path: force-app/main/default/decisionTables
-
     deploy_context_definitions:
-        description: Context Definitions need to be deployed and activated before other metadata -- this prioritizes this deployment first
+        description: Context Definitions need to be deployed and activated before
+            other metadata -- this prioritizes this deployment first
         class_path: cumulusci.tasks.salesforce.Deploy
         group: Revenue Lifecycle Management
         options:
             path: force-app/main/default/contextDefinitions
-
     deploy_expression_sets:
-        description: Expression Sets need to be deployed and activated before other metadata -- this prioritizes this deployment first
+        description: Expression Sets need to be deployed and activated before other
+            metadata -- this prioritizes this deployment first
         class_path: cumulusci.tasks.salesforce.Deploy
         group: Revenue Lifecycle Management
         options:
             path: force-app/main/default/expressionSetDefinition
             transforms:
-            - transform: find_replace
-              options:
-                patterns:
-                - xpath: //ExpressionSetDefinition/versions/variables/value[text()="__ATTRIBUTEPasID__"]
-                  replace_record_id_query: SELECT Id from PriceAdjustmentSchedule WHERE name = 'Standard Attribute Based Adjustment' LIMIT 1
-                  api: rest
-                - xpath: //ExpressionSetDefinition/versions/variables/value[text()="__VOLUMEPasID__"]
-                  replace_record_id_query: SELECT Id from PriceAdjustmentSchedule WHERE name = 'Standard Volume Based Adjustment' LIMIT 1
-                  api: rest
-                - xpath: //ExpressionSetDefinition/versions/variables/value[text()="__BUNDLEPasID__"]
-                  replace_record_id_query: SELECT Id from PriceAdjustmentSchedule WHERE name = 'Standard Bundle Based Adjustment' LIMIT 1
-                  api: rest
-                - xpath: //ExpressionSetDefinition/versions/variables/value[text()="__TIERPasID__"]
-                  replace_record_id_query: SELECT Id from PriceAdjustmentSchedule WHERE name = 'Standard Tier Based Adjustment' LIMIT 1
-                  api: rest
-
+            -   transform: find_replace
+                options:
+                    patterns:
+                    -   xpath: //ExpressionSetDefinition/versions/variables/value[text()="__ATTRIBUTEPasID__"]
+                        replace_record_id_query: SELECT Id from PriceAdjustmentSchedule
+                            WHERE name = 'Standard Attribute Based Adjustment' LIMIT
+                            1
+                        api: rest
+                    -   xpath: //ExpressionSetDefinition/versions/variables/value[text()="__VOLUMEPasID__"]
+                        replace_record_id_query: SELECT Id from PriceAdjustmentSchedule
+                            WHERE name = 'Standard Volume Based Adjustment' LIMIT
+                            1
+                        api: rest
+                    -   xpath: //ExpressionSetDefinition/versions/variables/value[text()="__BUNDLEPasID__"]
+                        replace_record_id_query: SELECT Id from PriceAdjustmentSchedule
+                            WHERE name = 'Standard Bundle Based Adjustment' LIMIT
+                            1
+                        api: rest
+                    -   xpath: //ExpressionSetDefinition/versions/variables/value[text()="__TIERPasID__"]
+                        replace_record_id_query: SELECT Id from PriceAdjustmentSchedule
+                            WHERE name = 'Standard Tier Based Adjustment' LIMIT 1
+                        api: rest
     deploy_full:
         description: Deploy all metadata
         class_path: cumulusci.tasks.salesforce.Deploy
@@ -155,101 +143,97 @@ tasks:
         options:
             path: force-app/main/default
             transforms:
-            - transform: find_replace
-              options:
-                patterns:
-                - xpath: //ExpressionSetDefinition/versions/variables/value[text()="__ATTRIBUTEPasID__"]
-                  replace_record_id_query: SELECT Id from PriceAdjustmentSchedule WHERE name = 'Standard Attribute Based Adjustment' LIMIT 1
-                  api: rest
-                - xpath: //ExpressionSetDefinition/versions/variables/value[text()="__VOLUMEPasID__"]
-                  replace_record_id_query: SELECT Id from PriceAdjustmentSchedule WHERE name = 'Standard Volume Based Adjustment' LIMIT 1
-                  api: rest
-                - xpath: //ExpressionSetDefinition/versions/variables/value[text()="__BUNDLEPasID__"]
-                  replace_record_id_query: SELECT Id from PriceAdjustmentSchedule WHERE name = 'Standard Bundle Based Adjustment' LIMIT 1
-                  api: rest
-                - xpath: //ExpressionSetDefinition/versions/variables/value[text()="__TIERPasID__"]
-                  replace_record_id_query: SELECT Id from PriceAdjustmentSchedule WHERE name = 'Standard Tier Based Adjustment' LIMIT 1
-                  api: rest
-
+            -   transform: find_replace
+                options:
+                    patterns:
+                    -   xpath: //ExpressionSetDefinition/versions/variables/value[text()="__ATTRIBUTEPasID__"]
+                        replace_record_id_query: SELECT Id from PriceAdjustmentSchedule
+                            WHERE name = 'Standard Attribute Based Adjustment' LIMIT
+                            1
+                        api: rest
+                    -   xpath: //ExpressionSetDefinition/versions/variables/value[text()="__VOLUMEPasID__"]
+                        replace_record_id_query: SELECT Id from PriceAdjustmentSchedule
+                            WHERE name = 'Standard Volume Based Adjustment' LIMIT
+                            1
+                        api: rest
+                    -   xpath: //ExpressionSetDefinition/versions/variables/value[text()="__BUNDLEPasID__"]
+                        replace_record_id_query: SELECT Id from PriceAdjustmentSchedule
+                            WHERE name = 'Standard Bundle Based Adjustment' LIMIT
+                            1
+                        api: rest
+                    -   xpath: //ExpressionSetDefinition/versions/variables/value[text()="__TIERPasID__"]
+                        replace_record_id_query: SELECT Id from PriceAdjustmentSchedule
+                            WHERE name = 'Standard Tier Based Adjustment' LIMIT 1
+                        api: rest
     deploy_relationship_graphs:
-        description: Relationship Graphs need to be deployed and activated before other metadata -- this prioritizes this deployment first
+        description: Relationship Graphs need to be deployed and activated before
+            other metadata -- this prioritizes this deployment first
         class_path: cumulusci.tasks.salesforce.Deploy
         group: Revenue Lifecycle Management
         options:
             path: force-app/main/default/relationshipGraphDefinitions
-
     deploy_org_settings:
-        description: Org Settings need to be deployed and activated before other metadata -- this prioritizes this deployment first
+        description: Org Settings need to be deployed and activated before other metadata
+            -- this prioritizes this deployment first
         class_path: cumulusci.tasks.salesforce.Deploy
         group: Revenue Lifecycle Management
         options:
             path: force-app/main/default/settings
-
     extendSalesContext:
         description: Extend Standard Sales Transaction Context
         class_path: tasks.rlm_extend_stdctx.ExtendStandardContext
         options:
-            name: *sales_transaction_context_name
-            description: "Extension of Standard Sales Transaction Context Definition"
-            developerName: *sales_transaction_context_name
-            baseReference: "SalesTransactionContext__stdctx"
-            startDate: "2024-01-01T00:00:00.000Z"
+            name: RLM_SalesTransactionContext
+            description: Extension of Standard Sales Transaction Context Definition
+            developerName: RLM_SalesTransactionContext
+            baseReference: SalesTransactionContext__stdctx
+            startDate: '2024-01-01T00:00:00.000Z'
             contextTtl: 20
-
     extendProductDiscoveryContext:
         description: Extend Standard Product Discovery Context
         class_path: tasks.rlm_extend_stdctx.ExtendStandardContext
         options:
-            name: *product_discovery_context_name
-            description: "Extension of Standard Product Discovery Context Definition"
-            developerName: *product_discovery_context_name
-            baseReference: "ProductDiscoveryContext__stdctx"
-            startDate: "2024-01-01T00:00:00.000Z"
+            name: RLM_ProductDiscoveryContext
+            description: Extension of Standard Product Discovery Context Definition
+            developerName: RLM_ProductDiscoveryContext
+            baseReference: ProductDiscoveryContext__stdctx
+            startDate: '2024-01-01T00:00:00.000Z'
             contextTtl: 20
-
     createPartnerCentral:
         class_path: cumulusci.tasks.salesforce.CreateCommunity
         options:
-            name: "rlm"
-            description: "RLM Partner Digital Experience"
-            template: "Build Your Own"
-            skip_existing: true
-
+            name: rlm
+            description: RLM Partner Digital Experience
+            template: Build Your Own
+            skip_existing: True
     create_price_adjustment_schedules:
         class_path: cumulusci.tasks.sfdx.SFDXOrgTask
         options:
-            command: 'sfdmu run -s csvfile -p datasets/sfdmu/pas'
-
+            command: sfdmu run -s csvfile -p datasets/sfdmu/pas
     insert_quantumbit_data:
         class_path: cumulusci.tasks.sfdx.SFDXOrgTask
         options:
-            command: 'sfdmu run -s csvfile -p datasets/sfdmu/multicurrency'
-
+            command: sfdmu run -s csvfile -p datasets/sfdmu/multicurrency
     activate_expression_sets:
         class_path: cumulusci.tasks.sfdx.SFDXOrgTask
         options:
-            command: 'sfdmu run -s csvfile -p datasets/sfdmu/expressionsets_active'
-
+            command: sfdmu run -s csvfile -p datasets/sfdmu/expressionsets_active
     deactivate_expression_sets:
         class_path: cumulusci.tasks.sfdx.SFDXOrgTask
         options:
-            command: 'sfdmu run -n -s csvfile -p datasets/sfdmu/expressionsets_inactive'
-
+            command: sfdmu run -n -s csvfile -p datasets/sfdmu/expressionsets_inactive
     insert_scratch_data:
         class_path: cumulusci.tasks.sfdx.SFDXOrgTask
         options:
-            command: 'sfdmu run -s csvfile -p datasets/sfdmu/scratch_data'
-
+            command: sfdmu run -s csvfile -p datasets/sfdmu/scratch_data
     activate_decision_tables:
         class_path: cumulusci.tasks.sfdx.SFDXOrgTask
         options:
-            command: 'sfdmu run -s csvfile -p datasets/sfdmu/decision_tables_active'
-
+            command: sfdmu run -s csvfile -p datasets/sfdmu/decision_tables_active
     deploy_sharing_rules:
         class_path: cumulusci.tasks.salesforce.DeployBundles
         options:
             path: unpackaged/post_sharing
-
 flows:
     insert_data:
         group: Revenue Lifecycle Management
@@ -257,15 +241,14 @@ flows:
             1:
                 task: dx
                 options:
-                    command: 'sfdmu run -s csvfile -p datasets/sfdmu/multicurrency'
-
+                    command: sfdmu run -s csvfile -p datasets/sfdmu/multicurrency
     prepare_core:
         group: Revenue Lifecycle Management
         steps:
             1:
                 task: assign_permission_set_licenses
                 options:
-                    api_names: *rlm_psl_api_names
+                    api_names: *id001
             2:
                 task: deploy_pre
             3:
@@ -273,15 +256,15 @@ flows:
             4:
                 task: util_sleep
                 options:
-                    seconds: *sleep_default
+                    seconds: 20
             5:
                 task: assign_permission_set_groups
                 options:
-                    api_names: *rlm_psg_api_names
+                    api_names: *id002
             6:
                 task: assign_permission_sets
                 options:
-                    api_names: *rlm_pcm_ps_api_names
+                    api_names: *id003
             7:
                 task: activate_decision_tables
                 when: org_config.scratch
@@ -290,14 +273,13 @@ flows:
             9:
                 task: util_sleep
                 options:
-                    seconds: *sleep_default
+                    seconds: 20
             10:
                 task: create_price_adjustment_schedules
             11:
                 task: util_sleep
                 options:
-                    seconds: *sleep_default
-
+                    seconds: 20
     extend_context_definitions:
         group: Revenue Lifecycle Management
         steps:
@@ -307,7 +289,6 @@ flows:
                 task: extend_stdctx_pd
             3:
                 task: extend_stdctx_cart
-
     prepare_rlm_org:
         group: Revenue Lifecycle Management
         steps:
@@ -315,9 +296,10 @@ flows:
                 flow: prepare_core
             2:
                 task: deactivate_expression_sets
-            3:    
+            3:
                 task: createPartnerCentral
-                when: project_config.project__custom__create_partner_community == true
+                when: project_config.project__custom__create_partner_community ==
+                    true
             4:
                 task: deploy_full
             5:
@@ -330,7 +312,8 @@ flows:
                 task: deploy_post
             9:
                 task: publish_community
-                when: project_config.project__custom__create_partner_community == true
+                when: project_config.project__custom__create_partner_community ==
+                    true
                 options:
                     name: rlm
             10:
@@ -343,4 +326,15 @@ flows:
                     path: unpackaged/post_scratch
             12:
                 task: deploy_sharing_rules
-                when: project_config.project__custom__create_partner_community == true
+                when: project_config.project__custom__create_partner_community ==
+                    true
+    dependencies:
+        steps:
+            3:
+                task: assign_permission_sets
+                options:
+                    api_names: alpha,beta,gamma
+            4:
+                task: assign_permission_set_licenses
+                options:
+                    api_names: delta,exta,extrasss
