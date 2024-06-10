@@ -5,172 +5,79 @@
 # .load.yml file and re-capturing:
 #
 #  https://cumulusci.readthedocs.io/en/stable/data.html#extracting-and-loading-sample-datasets
-Insert WorkBadgeDefinition:
-  sf_object: WorkBadgeDefinition
-  table: WorkBadgeDefinition
+Insert alphaa__c:
+  sf_object: alphaa__c
+  table: alphaa__c
   fields:
-  - IsActive
   - Name
-  - IsCompanyWide
-  - Description
-  - ImageUrl
-  - LimitNumber
-  - IsLimitPerUser
-  - LimitStartDate
-Insert Account:
-  sf_object: Account
-  table: Account
+  - betaa__c
+Insert DandBCompany:
+  sf_object: DandBCompany
+  table: DandBCompany
   fields:
-  - AccountNumber
-  - AccountSource
-  - AnnualRevenue
-  - BillingCity
-  - BillingCountry
-  - BillingGeocodeAccuracy
-  - BillingLatitude
-  - BillingLongitude
-  - BillingPostalCode
-  - BillingState
-  - BillingStreet
-  - CleanStatus
-  - Description
   - DunsNumber
-  - Fax
-  - Industry
-  - Jigsaw
-  - NaicsCode
-  - NaicsDesc
   - Name
-  - NumberOfEmployees
-  - Ownership
-  - Phone
-  - Rating
-  - ShippingCity
-  - ShippingCountry
-  - ShippingGeocodeAccuracy
-  - ShippingLatitude
-  - ShippingLongitude
-  - ShippingPostalCode
-  - ShippingState
-  - ShippingStreet
-  - Sic
-  - SicDesc
-  - Site
-  - TickerSymbol
-  - Tradestyle
-  - Type
-  - Website
-  - YearStarted
-Insert Asset:
-  sf_object: Asset
-  table: Asset
-  fields:
-  - Name
-Insert BusinessHours:
-  sf_object: BusinessHours
-  table: BusinessHours
-  fields:
-  - FridayEndTime
-  - FridayStartTime
-  - IsActive
-  - IsDefault
-  - MondayEndTime
-  - MondayStartTime
-  - Name
-  - SaturdayEndTime
-  - SaturdayStartTime
-  - SundayEndTime
-  - SundayStartTime
-  - ThursdayEndTime
-  - ThursdayStartTime
-  - TimeZoneSidKey
-  - TuesdayEndTime
-  - TuesdayStartTime
-  - WednesdayEndTime
-  - WednesdayStartTime
 Insert OperatingHours:
   sf_object: OperatingHours
   table: OperatingHours
   fields:
   - Name
   - TimeZone
-Insert ServiceContract:
-  sf_object: ServiceContract
-  table: ServiceContract
+Insert Account:
+  sf_object: Account
+  table: Account
   fields:
+  - Description
+  - Fax
   - Name
-Insert Pricebook2:
-  sf_object: Pricebook2
-  table: Pricebook2
-  fields:
-  - Name
-Insert Product2:
-  sf_object: Product2
-  table: Product2
-  fields:
-  - Name
-Insert PricebookEntry:
-  sf_object: PricebookEntry
-  table: PricebookEntry
-  fields:
-  - UnitPrice
-  lookups:
-    Pricebook2Id:
-      table:
-      - Pricebook2
-      key_field: Pricebook2Id
-    Product2Id:
-      table:
-      - Product2
-      key_field: Product2Id
-Insert ContractLineItem:
-  sf_object: ContractLineItem
-  table: ContractLineItem
-  fields:
-  - Quantity
-  - UnitPrice
-  lookups:
-    PricebookEntryId:
-      table:
-      - PricebookEntry
-      key_field: PricebookEntryId
-    ServiceContractId:
-      table:
-      - ServiceContract
-      key_field: ServiceContractId
-Insert Entitlement:
-  sf_object: Entitlement
-  table: Entitlement
-  fields:
-  - CasesPerEntitlement
-  - EndDate
-  - Name
-  - IsPerIncident
-  - RemainingCases
-  - StartDate
+  - AccountNumber
+  - Phone
+  - Rating
+  - Site
+  - AccountSource
   - Type
+  - AnnualRevenue
+  - BillingCity
+  - BillingCountry
+  - BillingGeocodeAccuracy
+  - BillingLatitude
+  - BillingLongitude
+  - BillingState
+  - BillingStreet
+  - BillingPostalCode
+  - CleanStatus
+  - DunsNumber
+  - Jigsaw
+  - NumberOfEmployees
+  - Industry
+  - NaicsCode
+  - NaicsDesc
+  - Ownership
+  - ShippingCity
+  - ShippingCountry
+  - ShippingGeocodeAccuracy
+  - ShippingLatitude
+  - ShippingLongitude
+  - ShippingState
+  - ShippingStreet
+  - ShippingPostalCode
+  - Sic
+  - SicDesc
+  - TickerSymbol
+  - Tradestyle
+  - Website
+  - YearStarted
   lookups:
-    AccountId:
+    DandbCompanyId:
       table:
-      - Account
-      key_field: AccountId
-    AssetId:
-      table:
-      - Asset
-      key_field: AssetId
-    BusinessHoursId:
-      table:
-      - BusinessHours
-      key_field: BusinessHoursId
-    ContractLineItemId:
-      table:
-      - ContractLineItem
-      key_field: ContractLineItemId
-    SvcApptBookingWindowsId:
+      - DandBCompany
+      key_field: DandbCompanyId
+    OperatingHoursId:
       table:
       - OperatingHours
-      key_field: SvcApptBookingWindowsId
-    ServiceContractId:
+      key_field: OperatingHoursId
+    ParentId:
       table:
-      - ServiceContract
-      key_field: ServiceContractId
+      - Account
+      key_field: ParentId
+      after: Insert Account

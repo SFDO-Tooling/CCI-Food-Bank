@@ -1,103 +1,58 @@
 extract:
-  WorkBadgeDefinition:
+  alphaa__c:
     fields:
-    - IsActive
     - Name
-    - IsCompanyWide
-    - Description
-    - ImageUrl
-    - LimitNumber
-    - IsLimitPerUser
-    - LimitStartDate
-  Entitlement:
-    fields:
-    - AccountId
-    - AssetId
-    - BusinessHoursId
-    - CasesPerEntitlement
-    - ContractLineItemId
-    - EndDate
-    - Name
-    - SlaProcessId
-    - SvcApptBookingWindowsId
-    - IsPerIncident
-    - RemainingCases
-    - ServiceContractId
-    - StartDate
-    - Type
+    - betaa__c
   Account:
     fields:
+    - Description
+    - Fax
+    - Name
     - AccountNumber
+    - Phone
+    - Rating
+    - Site
     - AccountSource
+    - Type
     - AnnualRevenue
     - BillingCity
     - BillingCountry
     - BillingGeocodeAccuracy
     - BillingLatitude
     - BillingLongitude
-    - BillingPostalCode
     - BillingState
     - BillingStreet
+    - BillingPostalCode
     - CleanStatus
-    - Description
+    - DandbCompanyId
     - DunsNumber
-    - Fax
-    - Industry
     - Jigsaw
+    - NumberOfEmployees
+    - Industry
     - NaicsCode
     - NaicsDesc
-    - Name
-    - NumberOfEmployees
+    - OperatingHoursId
     - Ownership
-    - Phone
-    - Rating
+    - ParentId
     - ShippingCity
     - ShippingCountry
     - ShippingGeocodeAccuracy
     - ShippingLatitude
     - ShippingLongitude
-    - ShippingPostalCode
     - ShippingState
     - ShippingStreet
+    - ShippingPostalCode
     - Sic
     - SicDesc
-    - Site
     - TickerSymbol
     - Tradestyle
-    - Type
     - Website
     - YearStarted
-  Asset:
+  DandBCompany:
     fields:
+    - DunsNumber
     - Name
-  BusinessHours:
-    fields:
-    - FridayEndTime
-    - FridayStartTime
-    - IsActive
-    - IsDefault
-    - MondayEndTime
-    - MondayStartTime
-    - Name
-    - SaturdayEndTime
-    - SaturdayStartTime
-    - SundayEndTime
-    - SundayStartTime
-    - ThursdayEndTime
-    - ThursdayStartTime
-    - TimeZoneSidKey
-    - TuesdayEndTime
-    - TuesdayStartTime
-    - WednesdayEndTime
-    - WednesdayStartTime
-  ContractLineItem:
-    fields:
-    - Quantity
-    - UnitPrice
   OperatingHours:
     fields:
     - Name
     - TimeZone
-  ServiceContract:
-    fields:
-    - Name
