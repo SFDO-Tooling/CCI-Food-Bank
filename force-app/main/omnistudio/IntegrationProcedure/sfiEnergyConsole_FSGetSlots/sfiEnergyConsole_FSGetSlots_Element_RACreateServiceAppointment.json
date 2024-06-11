@@ -1,0 +1,55 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "RACreateServiceAppointment",
+    "OmniProcessId": {
+        "Name": "sfiEnergyConsoleFSGetSlots",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/sfiEnergyConsole/FSGetSlots/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalChainableResponse": {
+        },
+        "additionalInput": {
+            "accountId": "%accountId%",
+            "contactId": "%contactId%",
+            "maxDueDays": 30,
+            "operatingHoursId": "%operatingHoursId%",
+            "schedulingPolicy": "Customer First",
+            "servTypeDesc": "=CONCAT('Service Type: '%serviceType%,' - ',%serviceDescription%)",
+            "serviceAddress": "%serviceAddress%",
+            "serviceTerritory": "%serviceTerritory%",
+            "workType": "%workType%"
+        },
+        "additionalOutput": {
+        },
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "(%action% == 'Main' && %isRescheduleFlow% == false)",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+            "ErrorMessage": "RACreateServiceAppointment : Failed to Create Service Appointment"
+        },
+        "label": "RemoteAction1",
+        "remoteClass": "SfiEnergyConsoleFSAPIFactory",
+        "remoteMethod": "createServiceAppointment",
+        "remoteOptions": {
+        },
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "Remote Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/sfiEnergyConsole/FSGetSlots/Procedure/RACreateServiceAppointment"
+}

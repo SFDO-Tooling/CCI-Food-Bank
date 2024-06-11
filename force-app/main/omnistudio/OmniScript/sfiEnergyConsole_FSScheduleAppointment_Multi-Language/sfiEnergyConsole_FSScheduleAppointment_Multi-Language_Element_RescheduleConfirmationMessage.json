@@ -1,0 +1,55 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "RescheduleConfirmationMessage",
+    "OmniProcessId": {
+        "Name": "sfiEnergyConsoleFSScheduleAppointment",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/sfiEnergyConsole/FSScheduleAppointment/Multi-Language",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "appointmentConfirmation",
+        "OmniProcessId": {
+            "Name": "sfiEnergyConsoleFSScheduleAppointment",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/sfiEnergyConsole/FSScheduleAppointment/Multi-Language",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/sfiEnergyConsole/FSScheduleAppointment/Multi-Language/appointmentConfirmation",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "appointmentConfirmation",
+    "ParentElementType": "Step",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "dataJSON": false,
+        "label": "sfiEnergyConsoleFSAppointmentConfirmation",
+        "sanitize": false,
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "true",
+                        "field": "isAppointmentBooked"
+                    },
+                    {
+                        "condition": "=",
+                        "data": "true",
+                        "field": "isRescheduleFlow"
+                    }
+                ]
+            }
+        },
+        "text": "",
+        "textKey": "sfiEnergyConsoleFSRescheduleConfirmationMessage"
+    },
+    "Type": "Text Block",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/sfiEnergyConsole/FSScheduleAppointment/Multi-Language/RescheduleConfirmationMessage"
+}

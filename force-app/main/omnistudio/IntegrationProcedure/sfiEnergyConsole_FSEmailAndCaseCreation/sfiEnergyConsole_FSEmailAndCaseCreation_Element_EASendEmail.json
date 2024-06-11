@@ -1,0 +1,49 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "EASendEmail",
+    "OmniProcessId": {
+        "Name": "sfiEnergyConsoleFSEmailAndCaseCreation",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/sfiEnergyConsole/FSEmailAndCaseCreation/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "OrgWideEmailAddress": "agent@console.com",
+        "actionMessage": "",
+        "attachmentList": "",
+        "chainOnStep": false,
+        "contentVersionList": "",
+        "disOnTplt": false,
+        "emailInformation": {
+            "bccAddressList": [
+            ],
+            "ccAddressList": [
+            ],
+            "emailBody": "Your field service appointment is scheduled for %slotTime%\n\nPlease be available to provide access for our technician.  \n\nThank you!",
+            "emailSubject": "Field Service Appointment scheduled - %appointmentNumber%",
+            "setHtmlBody": false,
+            "toAddressList": [
+                "%contactEmail%"
+            ]
+        },
+        "emailTemplateInformation": {
+            "emailTargetObjectId": "%contactId%",
+            "emailTemplateName": "sfiEnergyConsoleFSBookAppointmentConfirmation",
+            "saveAsActivity": false,
+            "whatId": ""
+        },
+        "executionConditionalFormula": "%isRescheduleFlow% == false",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "label": "EmailAction1",
+        "show": null,
+        "staticDocList": [
+        ],
+        "useTemplate": false
+    },
+    "Type": "Email Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/sfiEnergyConsole/FSEmailAndCaseCreation/Procedure/EASendEmail"
+}

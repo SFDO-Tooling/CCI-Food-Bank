@@ -1,0 +1,79 @@
+{
+    "IsActive": false,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "Delete Service Appointed created for Reschedule",
+    "OmniProcessId": {
+        "Name": "sfiEnergyConsoleFSScheduleAppointment",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/sfiEnergyConsole/FSScheduleAppointment/Multi-Language",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "allOrNone": false,
+        "businessCategory": "",
+        "businessEvent": "",
+        "cancelLabel": "",
+        "configurationErrorMessage": "",
+        "confirm": false,
+        "controlWidth": 12,
+        "deleteFailedMessage": "",
+        "deleteSObject": [
+            {
+                "AllOrNone": false,
+                "Id": "%appointmentSlots:serviceAppointmentValueForReschedule%",
+                "Type": "ServiceAppointment"
+            }
+        ],
+        "enableActionMessage": false,
+        "enableDefaultAbort": false,
+        "entityIsDeletedMessage": "",
+        "failureAbortLabel": "",
+        "failureAbortMessage": "",
+        "failureGoBackLabel": "sfiEnergyConsoleFSGoBack",
+        "failureNextLabel": "sfiEnergyConsoleFSContinue",
+        "inProgressMessage": "sfiEnergyConsoleFSInProgress",
+        "invalidIdMessage": "",
+        "label": "",
+        "message": {
+        },
+        "postMessage": "Done",
+        "pubsub": false,
+        "redirectNextLabel": "",
+        "redirectNextWidth": 3,
+        "redirectPageName": "",
+        "redirectPreviousLabel": "",
+        "redirectPreviousWidth": 3,
+        "redirectTemplateUrl": "vlcAcknowledge.html",
+        "remoteConfirmMsg": "",
+        "remoteOptions": {
+        },
+        "remoteTimeout": 30000,
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "show": {
+            "group": {
+                "operator": "AND",
+                "rules": [
+                    {
+                        "condition": "=",
+                        "data": "true",
+                        "field": "isRescheduleFlow"
+                    }
+                ]
+            }
+        },
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "subLabel": "",
+        "validationRequired": "Step",
+        "wpm": false
+    },
+    "Type": "Delete Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/sfiEnergyConsole/FSScheduleAppointment/Multi-Language/Delete Service Appointed created for Reschedule"
+}

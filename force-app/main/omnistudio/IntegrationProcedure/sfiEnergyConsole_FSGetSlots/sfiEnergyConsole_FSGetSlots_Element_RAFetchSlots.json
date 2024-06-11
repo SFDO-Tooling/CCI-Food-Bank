@@ -1,0 +1,56 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "RAFetchSlots",
+    "OmniProcessId": {
+        "Name": "sfiEnergyConsoleFSGetSlots",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/sfiEnergyConsole/FSGetSlots/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalChainableResponse": {
+        },
+        "additionalInput": {
+            "operatingHoursId": "%operatingHoursId%",
+            "schedulingPolicy": "Customer First",
+            "serviceAppointmentValue": "=%ReSerializeServiceAppt:serviceAppt:serviceApptDetails:serviceAppointmentId%",
+            "serviceApptDueDate": "=%ReSerializeServiceAppt:serviceAppt:serviceApptDetails:serviceApptDueDate%",
+            "serviceApptStartDate": "=%ReSerializeServiceAppt:serviceAppt:serviceApptDetails:serviceApptStartDate%",
+            "serviceTerritory": "%serviceTerritory%",
+            "slotsForDays": 5,
+            "sortBy": "SORT_BY_DATE",
+            "workOrderId": "=%ReSerializeServiceAppt:serviceAppt:serviceApptDetails:workOrderId%",
+            "workType": "%workType%"
+        },
+        "additionalOutput": {
+        },
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "(%action% == 'Main' && %isRescheduleFlow% == false)",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+            "ErrorMessage": "RAFetchSlots : Failed to fetch available slots"
+        },
+        "label": "RemoteAction1",
+        "remoteClass": "SfiEnergyConsoleFSAPIFactory",
+        "remoteMethod": "getSlotsVal",
+        "remoteOptions": {
+        },
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "Remote Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/sfiEnergyConsole/FSGetSlots/Procedure/RAFetchSlots"
+}

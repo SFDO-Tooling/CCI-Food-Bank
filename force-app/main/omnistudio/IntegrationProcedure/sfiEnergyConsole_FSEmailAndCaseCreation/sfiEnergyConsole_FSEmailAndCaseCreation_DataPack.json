@@ -1,0 +1,28 @@
+{
+    "CustomJavaScript": "sfiEnergyConsole_FSEmailAndCaseCreation_SampleInput.json",
+    "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+    "IsIntegrationProcedure": true,
+    "IsMetadataCacheDisabled": false,
+    "IsOmniScriptEmbeddable": false,
+    "IsTestProcedure": false,
+    "IsWebCompEnabled": false,
+    "Language": "Procedure",
+    "Name": "sfiEnergyConsoleFSEmailAndCaseCreation",
+    "OmniProcessElement": [
+        "sfiEnergyConsole_FSEmailAndCaseCreation_Element_SVBookAppointment.json",
+        "sfiEnergyConsole_FSEmailAndCaseCreation_Element_DRGetCaseRecordTypeId.json",
+        "sfiEnergyConsole_FSEmailAndCaseCreation_Element_DRCreateCaseForAppointment.json",
+        "sfiEnergyConsole_FSEmailAndCaseCreation_Element_EASendEmail.json",
+        "sfiEnergyConsole_FSEmailAndCaseCreation_Element_SendReScheduleEmail.json"
+    ],
+    "OmniProcessKey": "sfiEnergyConsole_FSEmailAndCaseCreation",
+    "OmniProcessType": "Integration Procedure",
+    "PropertySetConfig": "sfiEnergyConsole_FSEmailAndCaseCreation_PropertySetConfig.json",
+    "RequiredPermission": "sfiEnergyConsoleFSPermission",
+    "SubType": "FSEmailAndCaseCreation",
+    "Type": "sfiEnergyConsole",
+    "UniqueName": "sfiEnergyConsole_FSEmailAndCaseCreation_Procedure_2",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcess",
+    "VlocityRecordSourceKey": "OmniProcess/sfiEnergyConsole/FSEmailAndCaseCreation/Procedure"
+}

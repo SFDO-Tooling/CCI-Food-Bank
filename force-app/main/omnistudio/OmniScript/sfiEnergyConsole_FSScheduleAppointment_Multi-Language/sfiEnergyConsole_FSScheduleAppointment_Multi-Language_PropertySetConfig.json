@@ -1,0 +1,124 @@
+{
+    "allowCancel": true,
+    "allowSaveForLater": true,
+    "autoFocus": false,
+    "autoSaveOnStepNext": false,
+    "bLK": false,
+    "cancelRedirectPageName": "OmniScriptCancelled",
+    "cancelRedirectTemplateUrl": "vlcCancelled.html",
+    "cancelSource": "%ContextId%",
+    "cancelType": "SObject",
+    "consoleTabIcon": "custom:custom18",
+    "consoleTabLabel": "New",
+    "consoleTabTitle": "sfiEnergyConsoleActionsFSSchedule",
+    "currencyCode": "",
+    "currentLanguage": "en_US",
+    "disableUnloadWarn": true,
+    "elementTypeToHTMLTemplateMapping": {
+    },
+    "enableKnowledge": false,
+    "errorMessage": {
+        "custom": [
+        ]
+    },
+    "hideStepChart": false,
+    "knowledgeArticleTypeQueryFieldsMap": {
+    },
+    "lkObjName": null,
+    "mergeSavedData": false,
+    "message": {
+    },
+    "persistentComponent": [
+        {
+            "id": "vlcCart",
+            "itemsKey": "cartItems",
+            "modalConfigurationSetting": {
+                "modalController": "ModalProductCtrl",
+                "modalHTMLTemplateId": "vlcProductConfig.html",
+                "modalSize": "lg"
+            },
+            "postTransformBundle": "",
+            "preTransformBundle": "",
+            "remoteClass": "",
+            "remoteMethod": "",
+            "remoteOptions": {
+                "postTransformBundle": "",
+                "preTransformBundle": ""
+            },
+            "remoteTimeout": 30000,
+            "render": false,
+            "responseJSONNode": "",
+            "responseJSONPath": "",
+            "sendJSONNode": "",
+            "sendJSONPath": ""
+        },
+        {
+            "dispOutsideOmni": false,
+            "id": "vlcKnowledge",
+            "itemsKey": "knowledgeItems",
+            "modalConfigurationSetting": {
+                "modalController": "",
+                "modalHTMLTemplateId": "",
+                "modalSize": "lg"
+            },
+            "postTransformBundle": "",
+            "preTransformBundle": "",
+            "remoteClass": "",
+            "remoteMethod": "",
+            "remoteOptions": {
+                "postTransformBundle": "",
+                "preTransformBundle": ""
+            },
+            "remoteTimeout": 30000,
+            "render": false
+        }
+    ],
+    "pubsub": false,
+    "rtpSeed": false,
+    "saveContentEncoded": false,
+    "saveExpireInDays": null,
+    "saveForLaterRedirectPageName": "sflRedirect",
+    "saveForLaterRedirectTemplateUrl": "vlcSaveForLaterAcknowledge.html",
+    "saveNameTemplate": null,
+    "saveObjectId": "%ContextId%",
+    "saveURLPatterns": {
+    },
+    "scrollBehavior": "auto",
+    "seedDataJSON": {
+        "caseId": "",
+        "isFSPackageLicenseAvailable": true,
+        "isRescheduleFlow": false,
+        "serviceAppointmentId": "",
+        "slotsGrading": {
+            "recoIcon1": "utility:success",
+            "recoIcon2": "utility:success",
+            "recoIcon3": "utility:success",
+            "recoLabel1": "sfiEnergyRecommended",
+            "recoLabel2": "sfiEnergyConsoleFSGood",
+            "recoLabel3": "sfiEnergyConsoleFSAverage",
+            "recoMax1": "100",
+            "recoMax2": "69",
+            "recoMax3": "49",
+            "recoMin1": "69",
+            "recoMin2": "49",
+            "recoMin3": 0
+        },
+        "vipForNextWeekData": "sfiEnergyConsole_FSGetSlots",
+        "workOrderId": ""
+    },
+    "showInputWidth": false,
+    "ssm": false,
+    "stepChartPlacement": "top",
+    "stylesheet": {
+        "lightning": "",
+        "lightningRtl": "",
+        "newport": "",
+        "newportRtl": ""
+    },
+    "timeTracking": false,
+    "trackingCustomData": {
+    },
+    "visualforcePagesAvailableInPreview": {
+    },
+    "wpm": false
+}

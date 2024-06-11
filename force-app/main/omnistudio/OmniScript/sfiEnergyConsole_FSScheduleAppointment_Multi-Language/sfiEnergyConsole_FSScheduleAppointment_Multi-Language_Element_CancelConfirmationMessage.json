@@ -1,0 +1,39 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "CancelConfirmationMessage",
+    "OmniProcessId": {
+        "Name": "sfiEnergyConsoleFSScheduleAppointment",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/sfiEnergyConsole/FSScheduleAppointment/Multi-Language",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "cancelConfirmation",
+        "OmniProcessId": {
+            "Name": "sfiEnergyConsoleFSScheduleAppointment",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/sfiEnergyConsole/FSScheduleAppointment/Multi-Language",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/sfiEnergyConsole/FSScheduleAppointment/Multi-Language/cancelConfirmation",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "cancelConfirmation",
+    "ParentElementType": "Step",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "dataJSON": false,
+        "label": "sfiEnergyConsoleFSCancelConfirmation",
+        "sanitize": false,
+        "show": null,
+        "text": "",
+        "textKey": "sfiEnergyConsoleCancelConfirmationMessage"
+    },
+    "Type": "Text Block",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/sfiEnergyConsole/FSScheduleAppointment/Multi-Language/CancelConfirmationMessage"
+}

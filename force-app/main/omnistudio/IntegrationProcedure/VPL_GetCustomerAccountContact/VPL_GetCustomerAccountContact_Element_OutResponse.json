@@ -1,0 +1,41 @@
+{
+    "Description": "Response Action sends back the desired Account & contact Id",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "OutResponse",
+    "OmniProcessId": {
+        "Name": "VPL-GetAccountContact",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/VPL/GetCustomerAccountContact/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "additionalOutput": {
+            "AccountId": "=IF(%GetCustomerInterationAccount:Interaction:%vlocity_namespace%__AccountId__c% == NULL, Id, GetCustomerInterationAccount:Interaction:%vlocity_namespace%__AccountId__c)",
+            "AccountRecordType": "=%CheckAccountRecordType:AccountRecordType%",
+            "BillDeliveryMethod": "=%CheckAccountRecordType:AccountBillDeliveryMethod%",
+            "ContactId": "=IF(%GetCustomerInterationAccount:Interaction:ContactId% == NULL, NULL, GetCustomerInterationAccount:Interaction:ContactId)",
+            "ContextAccountName": "=%CheckAccountRecordType:AccountName%"
+        },
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "label": "ResponseAction1",
+        "responseDefaultData": {
+        },
+        "responseFormat": "JSON",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnFullDataJSON": false,
+        "returnOnlyAdditionalOutput": true,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "show": null,
+        "useFormulas": true,
+        "vlcResponseHeaders": {
+        }
+    },
+    "Type": "Response Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/VPL/GetCustomerAccountContact/Procedure/OutResponse"
+}

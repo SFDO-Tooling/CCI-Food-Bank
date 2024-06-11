@@ -1,0 +1,47 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "DRCreateCaseForAppointment",
+    "OmniProcessId": {
+        "Name": "sfiEnergyConsoleFSEmailAndCaseCreation",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/sfiEnergyConsole/FSEmailAndCaseCreation/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+            "accountId": "%accountId%",
+            "caseRecordTypeId": "%DRGetCaseRecordTypeId:RecordTypeId%",
+            "contactId": "%contactId%",
+            "servApptDescription": "%SVBookAppointment:servDescription%",
+            "workOrderId": "%workOrderId%",
+            "workType": "%workType%"
+        },
+        "additionalOutput": {
+        },
+        "bundle": "sfiEnergyConsoleFSCreateCase",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "%isRescheduleFlow% == false",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+            "ErrorMessage": "DRCreateCaseForAppointment : Failed to create service case"
+        },
+        "label": "DataRaptorPostAction1",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Post Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/sfiEnergyConsole/FSEmailAndCaseCreation/Procedure/DRCreateCaseForAppointment"
+}

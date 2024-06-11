@@ -1,0 +1,7 @@
+[
+    "IntegrationProcedure/sfiEnergyConsole_FSEmailAndCaseCreation",
+    "IntegrationProcedure/sfiEnergyConsole_FSFetchInputDetails",
+    "IntegrationProcedure/sfiEnergyConsole_FSGetSlots",
+    "IntegrationProcedure/sfiEnergyConsole_FSScheduleAppointment",
+    "IntegrationProcedure/sfiEnergyConsole_FSUpdateAppointment"
+]

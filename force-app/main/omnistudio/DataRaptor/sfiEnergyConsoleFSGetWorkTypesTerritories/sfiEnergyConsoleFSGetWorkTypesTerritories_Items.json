@@ -1,0 +1,199 @@
+[
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "AccountId",
+        "GlobalKey": "sfiEnergyConsoleFSGetWorkTypesTerritories5396696822198457",
+        "InputFieldName": "Id",
+        "InputObjectName": "Account",
+        "InputObjectQuerySequence": 1,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "sfiEnergyConsoleFSGetWorkTypesTerritories",
+        "OmniDataTransformationId": {
+            "Name": "sfiEnergyConsoleFSGetWorkTypesTerritories",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/sfiEnergyConsoleFSGetWorkTypesTerritories",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Account",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "<=",
+        "FilterValue": "'240'",
+        "GlobalKey": "sfiEnergyConsoleFSGetWorkTypesTerritories9641331210500876",
+        "InputFieldName": "DurationInMinutes",
+        "InputObjectName": "WorkType",
+        "InputObjectQuerySequence": 2,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "sfiEnergyConsoleFSGetWorkTypesTerritories",
+        "OmniDataTransformationId": {
+            "Name": "sfiEnergyConsoleFSGetWorkTypesTerritories",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/sfiEnergyConsoleFSGetWorkTypesTerritories",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "AllWorkTypes",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "'true'",
+        "GlobalKey": "sfiEnergyConsoleFSGetWorkTypesTerritories08236156214559731",
+        "InputFieldName": "IsActive",
+        "InputObjectName": "ServiceTerritory",
+        "InputObjectQuerySequence": 3,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "sfiEnergyConsoleFSGetWorkTypesTerritories",
+        "OmniDataTransformationId": {
+            "Name": "sfiEnergyConsoleFSGetWorkTypesTerritories",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/sfiEnergyConsoleFSGetWorkTypesTerritories",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "AllServiceTerritories",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "Account:OperatingHoursId",
+        "GlobalKey": "sfiEnergyConsoleFSGetWorkTypesTerritories26793012008792494",
+        "InputFieldName": "OperatingHoursId",
+        "InputObjectName": "ServiceTerritory",
+        "InputObjectQuerySequence": 3,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "sfiEnergyConsoleFSGetWorkTypesTerritories",
+        "OmniDataTransformationId": {
+            "Name": "sfiEnergyConsoleFSGetWorkTypesTerritories",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/sfiEnergyConsoleFSGetWorkTypesTerritories",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "AllServiceTerritories",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "AllServiceTerritories:Name",
+        "FormulaResultPath": "ServiceTerritories",
+        "FormulaSequence": 2,
+        "GlobalKey": "sfiEnergyConsoleFSGetWorkTypesTerritories4414471304927261",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "sfiEnergyConsoleFSGetWorkTypesTerritories",
+        "OmniDataTransformationId": {
+            "Name": "sfiEnergyConsoleFSGetWorkTypesTerritories",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/sfiEnergyConsoleFSGetWorkTypesTerritories",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FormulaExpression": "AllWorkTypes:Name",
+        "FormulaResultPath": "WorkTypes",
+        "FormulaSequence": 1,
+        "GlobalKey": "sfiEnergyConsoleFSGetWorkTypesTerritories49442843116317836",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "sfiEnergyConsoleFSGetWorkTypesTerritories",
+        "OmniDataTransformationId": {
+            "Name": "sfiEnergyConsoleFSGetWorkTypesTerritories",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/sfiEnergyConsoleFSGetWorkTypesTerritories",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Formula",
+        "OutputObjectName": "Formula",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "sfiEnergyConsoleFSGetWorkTypesTerritories6182266944615311",
+        "InputFieldName": "ServiceTerritories",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "sfiEnergyConsoleFSGetWorkTypesTerritories",
+        "OmniDataTransformationId": {
+            "Name": "sfiEnergyConsoleFSGetWorkTypesTerritories",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/sfiEnergyConsoleFSGetWorkTypesTerritories",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "List<String>",
+        "OutputFieldName": "ServiceTerritories",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "sfiEnergyConsoleFSGetWorkTypesTerritories5226177870346727",
+        "InputFieldName": "WorkTypes",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "sfiEnergyConsoleFSGetWorkTypesTerritories",
+        "OmniDataTransformationId": {
+            "Name": "sfiEnergyConsoleFSGetWorkTypesTerritories",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/sfiEnergyConsoleFSGetWorkTypesTerritories",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldFormat": "List<String>",
+        "OutputFieldName": "WorkTypes",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "sfiEnergyConsoleFSGetWorkTypesTerritories675127830057116",
+        "InputFieldName": "Account:OperatingHoursId",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "sfiEnergyConsoleFSGetWorkTypesTerritories",
+        "OmniDataTransformationId": {
+            "Name": "sfiEnergyConsoleFSGetWorkTypesTerritories",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/sfiEnergyConsoleFSGetWorkTypesTerritories",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "operatingHoursId",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

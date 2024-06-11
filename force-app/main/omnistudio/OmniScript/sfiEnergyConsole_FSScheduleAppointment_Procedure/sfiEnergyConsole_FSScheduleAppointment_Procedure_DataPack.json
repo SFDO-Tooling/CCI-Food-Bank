@@ -1,0 +1,27 @@
+{
+    "CustomJavaScript": "sfiEnergyConsole_FSScheduleAppointment_Procedure_JavaScript.js",
+    "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+    "IsIntegrationProcedure": true,
+    "IsMetadataCacheDisabled": false,
+    "IsOmniScriptEmbeddable": false,
+    "IsTestProcedure": false,
+    "IsWebCompEnabled": false,
+    "Language": "Procedure",
+    "Name": "sfiEnergyConsoleFSScheduleAppointment",
+    "OmniProcessElement": [
+        "sfiEnergyConsole_FSScheduleAppointment_Procedure_Element_SVBookAppointment.json",
+        "sfiEnergyConsole_FSScheduleAppointment_Procedure_Element_RABookAppointment.json",
+        "sfiEnergyConsole_FSScheduleAppointment_Procedure_Element_DeleteServiceAppointmentcreatedforReschedule.json",
+        "sfiEnergyConsole_FSScheduleAppointment_Procedure_Element_ResponseAction.json"
+    ],
+    "OmniProcessKey": "sfiEnergyConsole_FSScheduleAppointment",
+    "OmniProcessType": "Integration Procedure",
+    "PropertySetConfig": "sfiEnergyConsole_FSScheduleAppointment_Procedure_PropertySetConfig.json",
+    "RequiredPermission": "sfiEnergyConsoleFSPermission",
+    "SubType": "FSScheduleAppointment",
+    "Type": "sfiEnergyConsole",
+    "UniqueName": "sfiEnergyConsole_FSScheduleAppointment_Procedure_2",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcess",
+    "VlocityRecordSourceKey": "OmniProcess/sfiEnergyConsole/FSScheduleAppointment/Procedure"
+}

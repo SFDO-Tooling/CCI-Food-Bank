@@ -1,0 +1,54 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "RAFetchRescheduleSlots",
+    "OmniProcessId": {
+        "Name": "sfiEnergyConsoleFSGetSlots",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/sfiEnergyConsole/FSGetSlots/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalChainableResponse": {
+        },
+        "additionalInput": {
+            "appointmentStatus": "None",
+            "clonedserviceAppointmentValue": "=%ReSerializeRescheduleSetup:reschedule:rescheduleDetails:serviceAppointmentId%",
+            "maxDueDays": 30,
+            "schedulingPolicy": "Customer First",
+            "serviceAppointmentValue": "%serviceAppointmentId%",
+            "slotsForDays": 5,
+            "sortBy": "SORT_BY_DATE",
+            "workOrderId": "=%ReSerializeRescheduleSetup:reschedule:rescheduleDetails:workOrderId%"
+        },
+        "additionalOutput": {
+        },
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "(%action% == 'Main' && %isRescheduleFlow% == true)",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+            "ErrorMessage": "RAFetchRescheduleSlots : Failed to fetch available slots"
+        },
+        "label": "RemoteAction1",
+        "remoteClass": "sfiEnergyConsoleFSAPIFactory",
+        "remoteMethod": "getRescheduleSlots",
+        "remoteOptions": {
+        },
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "Remote Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/sfiEnergyConsole/FSGetSlots/Procedure/RAFetchRescheduleSlots"
+}

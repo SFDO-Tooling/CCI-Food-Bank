@@ -1,0 +1,125 @@
+[
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "=",
+        "FilterValue": "Id",
+        "GlobalKey": "VPLGetCustomerInteractionAccount5162673488979643",
+        "InputFieldName": "Id",
+        "InputObjectName": "%vlocity_namespace%__CustomerInteraction__c",
+        "InputObjectQuerySequence": 1,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "VPLGetCustomerInteractionAccount",
+        "OmniDataTransformationId": {
+            "Name": "VPLGetCustomerInteractionAccount",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/VPLGetCustomerInteractionAccount",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Interaction",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "FilterGroup": 0,
+        "FilterOperator": "LIMIT",
+        "FilterValue": "1",
+        "GlobalKey": "VPLGetCustomerInteractionAccount5211426607122345",
+        "InputObjectName": "%vlocity_namespace%__CustomerInteraction__c",
+        "InputObjectQuerySequence": 1,
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "VPLGetCustomerInteractionAccount",
+        "OmniDataTransformationId": {
+            "Name": "VPLGetCustomerInteractionAccount",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/VPLGetCustomerInteractionAccount",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 0,
+        "OutputFieldName": "Interaction",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "VPLGetCustomerInteractionAccount06469220824292932",
+        "InputFieldName": "Interaction:%vlocity_namespace%__AccountId__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "VPLGetCustomerInteractionAccount",
+        "OmniDataTransformationId": {
+            "Name": "VPLGetCustomerInteractionAccount",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/VPLGetCustomerInteractionAccount",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Interaction:%vlocity_namespace%__AccountId__c",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "VPLGetCustomerInteractionAccount8144343414350119",
+        "InputFieldName": "Interaction:%vlocity_namespace%__AccountId__r.%vlocity_namespace%__BillDeliveryMethod__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "VPLGetCustomerInteractionAccount",
+        "OmniDataTransformationId": {
+            "Name": "VPLGetCustomerInteractionAccount",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/VPLGetCustomerInteractionAccount",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Interaction:BillDeliveryMethod",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "VPLGetCustomerInteractionAccount9594921121902888",
+        "InputFieldName": "Interaction:%vlocity_namespace%__ContactId__c",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "VPLGetCustomerInteractionAccount",
+        "OmniDataTransformationId": {
+            "Name": "VPLGetCustomerInteractionAccount",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/VPLGetCustomerInteractionAccount",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Interaction:ContactId",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    },
+    {
+        "GlobalKey": "VPLGetCustomerInteractionAccount6553779254196099",
+        "InputFieldName": "Interaction:Id",
+        "IsDisabled": false,
+        "IsRequiredForUpsert": false,
+        "IsUpsertKey": false,
+        "Name": "VPLGetCustomerInteractionAccount",
+        "OmniDataTransformationId": {
+            "Name": "VPLGetCustomerInteractionAccount",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniDataTransform/VPLGetCustomerInteractionAccount",
+            "VlocityRecordSObjectType": "OmniDataTransform"
+        },
+        "OutputCreationSequence": 1,
+        "OutputFieldName": "Interaction:Id",
+        "OutputObjectName": "json",
+        "VlocityDataPackType": "SObject",
+        "VlocityRecordSObjectType": "OmniDataTransformItem"
+    }
+]

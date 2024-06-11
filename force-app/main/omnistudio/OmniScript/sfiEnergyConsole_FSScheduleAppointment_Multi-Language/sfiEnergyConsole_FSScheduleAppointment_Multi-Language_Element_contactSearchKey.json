@@ -1,0 +1,69 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "contactSearchKey",
+    "OmniProcessId": {
+        "Name": "sfiEnergyConsoleFSScheduleAppointment",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/sfiEnergyConsole/FSScheduleAppointment/Multi-Language",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "ParentElementId": {
+        "Name": "inputDetailsBlock",
+        "OmniProcessId": {
+            "Name": "sfiEnergyConsoleFSScheduleAppointment",
+            "VlocityDataPackType": "VlocityMatchingKeyObject",
+            "VlocityMatchingRecordSourceKey": "OmniProcess/sfiEnergyConsole/FSScheduleAppointment/Multi-Language",
+            "VlocityRecordSObjectType": "OmniProcess"
+        },
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcessElement/OmniProcess/sfiEnergyConsole/FSScheduleAppointment/Multi-Language/inputDetailsBlock",
+        "VlocityRecordSObjectType": "OmniProcessElement"
+    },
+    "ParentElementName": "inputDetailsBlock",
+    "ParentElementType": "Block",
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "accessibleInFutureSteps": false,
+        "callFrequency": 300,
+        "conditionType": "Hide if False",
+        "controlWidth": 12,
+        "dataJsonPath": "contactList",
+        "dataProcessorFunction": "",
+        "debounceValue": 0,
+        "disableDataFilter": false,
+        "editMode": false,
+        "enableGoogleMapsAutocomplete": false,
+        "enableLookup": false,
+        "googleAddressCountry": "all",
+        "googleMapsAPIKey": "",
+        "googleTransformation": {
+            "administrative_area_level_1": "",
+            "administrative_area_level_2": "",
+            "country": "",
+            "locality": "",
+            "postal_code": "",
+            "street": ""
+        },
+        "help": false,
+        "helpText": "",
+        "hideEditButton": true,
+        "hideMap": true,
+        "inputWidth": 12,
+        "label": "sfiEnergyConsoleFSContactName",
+        "lwcComponentOverride": "",
+        "maxLength": 255,
+        "minLength": 0,
+        "newItemLabel": "sfiEnergyConsoleFSNewItemLabel",
+        "readOnly": false,
+        "required": true,
+        "show": null,
+        "showInputWidth": false,
+        "typeAheadKey": "contactName",
+        "useDataJson": false
+    },
+    "Type": "Type Ahead Block",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/sfiEnergyConsole/FSScheduleAppointment/Multi-Language/contactSearchKey"
+}

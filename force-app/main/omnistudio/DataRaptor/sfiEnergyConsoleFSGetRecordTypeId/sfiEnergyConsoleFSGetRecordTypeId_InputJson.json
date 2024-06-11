@@ -1,0 +1,17 @@
+{
+    "ContextId": null,
+    "timeStamp": null,
+    "userId": null,
+    "userName": null,
+    "userProfile": null,
+    "userTimeZone": null,
+    "vlcPersistentComponent": {
+    },
+    "vlcTimeTracking": {
+        "DRCreateCaseForAppointment": null,
+        "DRGetCaseRecordTypeId": null,
+        "EASendEmail": null,
+        "RABookAppointment": null,
+        "SVBookAppointment": null
+    }
+}

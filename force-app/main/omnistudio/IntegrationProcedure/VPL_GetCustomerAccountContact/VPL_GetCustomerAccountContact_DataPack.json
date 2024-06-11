@@ -1,0 +1,27 @@
+{
+    "CustomJavaScript": "VPL_GetCustomerAccountContact_SampleInput.json",
+    "Description": "Fetches Account & Contact Id from any given CustomerInteraction or Account Id",
+    "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+    "IsIntegrationProcedure": true,
+    "IsMetadataCacheDisabled": false,
+    "IsOmniScriptEmbeddable": false,
+    "IsTestProcedure": false,
+    "IsWebCompEnabled": false,
+    "Language": "Procedure",
+    "Name": "VPL-GetAccountContact",
+    "OmniProcessElement": [
+        "VPL_GetCustomerAccountContact_Element_GetCustomerInterationAccount.json",
+        "VPL_GetCustomerAccountContact_Element_CheckAccountId.json",
+        "VPL_GetCustomerAccountContact_Element_CheckAccountRecordType.json",
+        "VPL_GetCustomerAccountContact_Element_OutResponse.json"
+    ],
+    "OmniProcessKey": "VPL_GetCustomerAccountContact",
+    "OmniProcessType": "Integration Procedure",
+    "PropertySetConfig": "VPL_GetCustomerAccountContact_PropertySetConfig.json",
+    "SubType": "GetCustomerAccountContact",
+    "Type": "VPL",
+    "UniqueName": "VPL_GetCustomerAccountContact_Procedure_4",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcess",
+    "VlocityRecordSourceKey": "OmniProcess/VPL/GetCustomerAccountContact/Procedure"
+}

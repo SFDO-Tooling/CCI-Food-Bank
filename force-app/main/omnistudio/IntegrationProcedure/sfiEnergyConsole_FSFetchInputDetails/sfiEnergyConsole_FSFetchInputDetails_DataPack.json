@@ -1,0 +1,26 @@
+{
+    "CustomJavaScript": "sfiEnergyConsole_FSFetchInputDetails_SampleInput.json",
+    "ElementTypeComponentMapping": "{\"ElementTypeToHTMLTemplateList\":[]}",
+    "IsIntegrationProcedure": true,
+    "IsMetadataCacheDisabled": false,
+    "IsOmniScriptEmbeddable": false,
+    "IsTestProcedure": false,
+    "IsWebCompEnabled": false,
+    "Language": "Procedure",
+    "Name": "sfiEnergyConsoleFSFetchInputDetails",
+    "OmniProcessElement": [
+        "sfiEnergyConsole_FSFetchInputDetails_Element_VIPGetAccountFromInteraction.json",
+        "sfiEnergyConsole_FSFetchInputDetails_Element_DRFetchWorkTypesAndTerritories.json",
+        "sfiEnergyConsole_FSFetchInputDetails_Element_ResponseAction.json"
+    ],
+    "OmniProcessKey": "sfiEnergyConsole_FSFetchInputDetails",
+    "OmniProcessType": "Integration Procedure",
+    "PropertySetConfig": "sfiEnergyConsole_FSFetchInputDetails_PropertySetConfig.json",
+    "RequiredPermission": "sfiEnergyConsoleFSPermission",
+    "SubType": "FSFetchInputDetails",
+    "Type": "sfiEnergyConsole",
+    "UniqueName": "sfiEnergyConsole_FSFetchInputDetails_Procedure_2",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcess",
+    "VlocityRecordSourceKey": "OmniProcess/sfiEnergyConsole/FSFetchInputDetails/Procedure"
+}

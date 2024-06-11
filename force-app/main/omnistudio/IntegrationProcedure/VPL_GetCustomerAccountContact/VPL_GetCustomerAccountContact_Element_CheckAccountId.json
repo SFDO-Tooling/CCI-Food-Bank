@@ -1,0 +1,31 @@
+{
+    "Description": "Set AccountId Value",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "CheckAccountId",
+    "OmniProcessId": {
+        "Name": "VPL-GetAccountContact",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/VPL/GetCustomerAccountContact/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "elementValueMap": {
+            "SetAccountId": "=IF(%GetCustomerInterationAccount:Interaction:%vlocity_namespace%__AccountId__c% == NULL, Id, GetCustomerInterationAccount:Interaction:%vlocity_namespace%__AccountId__c)"
+        },
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "label": "SetValues1",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "show": null
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/VPL/GetCustomerAccountContact/Procedure/CheckAccountId"
+}

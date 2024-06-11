@@ -1,0 +1,37 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "UpdateInputDetails",
+    "OmniProcessId": {
+        "Name": "sfiEnergyConsoleFSScheduleAppointment",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/sfiEnergyConsole/FSScheduleAppointment/Multi-Language",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "controlWidth": 12,
+        "elementValueMap": {
+            "contactEmailFinal": "=IF(%isRescheduleFlow% == false, %inputDetails:inputDetailsBlock:contactSearchKey-Block:contactEmail%, %appointmentSlots:contactEmail%)",
+            "primaryContactFinal": "=IF(%isRescheduleFlow% == false, %contactSearchKey%, %appointmentSlots:contactName%)",
+            "serviceDescriptionFinal": "=IF(%isRescheduleFlow% == false, %serviceDescription%, %appointmentSlots:serviceDescription%)",
+            "serviceLocationFinal": "=IF(%isRescheduleFlow% == false, %serviceLocationSearchKey%, %appointmentSlots:serviceAddress%)",
+            "workTypeFinal": "=IF(%isRescheduleFlow% == false, %workType%, %appointmentSlots:workType%)"
+        },
+        "label": "",
+        "message": {
+        },
+        "pubsub": false,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "wpm": false
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/sfiEnergyConsole/FSScheduleAppointment/Multi-Language/UpdateInputDetails"
+}

@@ -1,0 +1,30 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ReSerializeRescheduleSetup",
+    "OmniProcessId": {
+        "Name": "sfiEnergyConsoleFSGetSlots",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/sfiEnergyConsole/FSGetSlots/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "chainOnStep": true,
+        "disOnTplt": false,
+        "elementValueMap": {
+            "reschedule": "=RESERIALIZE(%RARescheduleSetup%)"
+        },
+        "executionConditionalFormula": "(%action% == 'Main' && %isRescheduleFlow% == true)",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "label": "SetValues1",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "show": null
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/sfiEnergyConsole/FSGetSlots/Procedure/ReSerializeRescheduleSetup"
+}

@@ -1,0 +1,88 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "VIPBookFSLAppointment",
+    "OmniProcessId": {
+        "Name": "sfiEnergyConsoleFSScheduleAppointment",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/sfiEnergyConsole/FSScheduleAppointment/Multi-Language",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "HTMLTemplateId": "",
+        "businessCategory": "",
+        "businessEvent": "",
+        "controlWidth": 12,
+        "enableActionMessage": false,
+        "enableDefaultAbort": false,
+        "errorMessage": {
+            "custom": [
+            ],
+            "default": "sfiEnergyConsoleFSErrorMessage"
+        },
+        "extraPayload": {
+            "accountId": "%AccountId%",
+            "contactEmail": "%inputDetails:inputDetailsBlock:contactSearchKey-Block:contactEmail%",
+            "contactId": "%inputDetails:inputDetailsBlock:contactSearchKey-Block:contactId%",
+            "currentRangeDT": "%chooseTimeSlot:chooseTimeSlotBlock:showSlots:selectedDateRange%",
+            "isRescheduleFlow": "%isRescheduleFlow%",
+            "schedulingPolicyId": "%appointmentSlots:schedulingPolicyId%",
+            "selectedEndTime": "%chooseTimeSlot:chooseTimeSlotBlock:showSlots:selectedEndTime%",
+            "selectedStartTime": "%chooseTimeSlot:chooseTimeSlotBlock:showSlots:selectedStartTime%",
+            "serviceAppointmentValue": "%appointmentSlots:serviceAppointmentValue%",
+            "serviceAppointmentValueForReschedule": "%clonedServiceAppointmentId%",
+            "serviceDescription": "%commentsReview%",
+            "serviceType": "%serviceType%",
+            "slotTime": "%chooseTimeSlot:chooseTimeSlotBlock:showSlots:displayValue%",
+            "timeZone": "%appointmentSlots:timeZone%",
+            "workOrderId": "%appointmentSlots:workOrderId%",
+            "workType": "%workType%"
+        },
+        "failureAbortLabel": "",
+        "failureAbortMessage": "",
+        "failureGoBackLabel": "sfiEnergyConsoleFSGoBack",
+        "failureNextLabel": "sfiEnergyConsoleFSContinue",
+        "inProgressMessage": "sfiEnergyConsoleFSInProgress",
+        "integrationProcedureKey": "sfiEnergyConsole_FSScheduleAppointment",
+        "label": "",
+        "message": {
+        },
+        "postMessage": "Done",
+        "postTransformBundle": "",
+        "preTransformBundle": "",
+        "pubsub": false,
+        "redirectNextLabel": "",
+        "redirectNextWidth": 3,
+        "redirectPageName": "",
+        "redirectPreviousLabel": "",
+        "redirectPreviousWidth": 3,
+        "redirectTemplateUrl": "vlcAcknowledge.html",
+        "remoteOptions": {
+            "chainable": false,
+            "postTransformBundle": "",
+            "preTransformBundle": "",
+            "useFuture": false
+        },
+        "remoteTimeout": 30000,
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyExtraPayload": true,
+        "show": null,
+        "showPersistentComponent": [
+            true,
+            false
+        ],
+        "ssm": false,
+        "svgIcon": "",
+        "svgSprite": "",
+        "useContinuation": false,
+        "validationRequired": "Step",
+        "wpm": false
+    },
+    "Type": "Integration Procedure Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/sfiEnergyConsole/FSScheduleAppointment/Multi-Language/VIPBookFSLAppointment"
+}

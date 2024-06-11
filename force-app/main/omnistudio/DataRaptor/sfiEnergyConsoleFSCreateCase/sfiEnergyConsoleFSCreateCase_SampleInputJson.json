@@ -1,0 +1,14 @@
+{
+    "accountId": "0013h00000CLSK5",
+    "caseOrigin": "Phone",
+    "caseRecordTypeName": "Service",
+    "contactEmail": "nnaruka@salesforce.com",
+    "contactId": "0033h00000Au5DEAAZ",
+    "currentRangeDT": "2021-06-07 09:00:00 _ 2021-06-15 15:00:00",
+    "schedulingPolicyId": "a6j3h000000032OAAQ",
+    "servApptDescription": "Test",
+    "serviceAppointmentValue": "08p3h000001N1BZAA0",
+    "status": "New",
+    "workOrderId": "0WO3h000000q4MiGAI",
+    "workType": "Gas Leakage Order"
+}

@@ -1,0 +1,30 @@
+{
+    "IsActive": false,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "ReSerializeNextSlotsSetup",
+    "OmniProcessId": {
+        "Name": "sfiEnergyConsoleFSGetSlots",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/sfiEnergyConsole/FSGetSlots/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "chainOnStep": true,
+        "disOnTplt": false,
+        "elementValueMap": {
+            "nextSlots": "=RESERIALIZE(%RANextSlotsSetup%)"
+        },
+        "executionConditionalFormula": "(%action% == 'Next' || %action% == 'Extend')",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "label": "SetValues1",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "show": null
+    },
+    "Type": "Set Values",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/sfiEnergyConsole/FSGetSlots/Procedure/ReSerializeNextSlotsSetup"
+}

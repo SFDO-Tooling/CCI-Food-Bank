@@ -1,0 +1,52 @@
+{
+    "Description": "//Extend functionality :- run this for Next and extend",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "RANextSlotsSetup",
+    "OmniProcessId": {
+        "Name": "sfiEnergyConsoleFSGetSlots",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/sfiEnergyConsole/FSGetSlots/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalChainableResponse": {
+        },
+        "additionalInput": {
+            "currentRangeDT": "%currentRangeDT%",
+            "maxDueDays": 30,
+            "operatingHoursId": "%operatingHoursId%",
+            "serviceAppointmentValue": "%serviceAppointmentValue%",
+            "workOrderId": "%workOrderId%"
+        },
+        "additionalOutput": {
+        },
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "(%action% == 'Next' || %action% == 'Extend')",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+            "ErrorMessage": "RANextSlotsSetup : Failed to setup next available slots data"
+        },
+        "label": "RemoteAction1",
+        "remoteClass": "sfiEnergyConsoleFSAPIFactory",
+        "remoteMethod": "adjacentSlotsSetup",
+        "remoteOptions": {
+        },
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "Remote Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/sfiEnergyConsole/FSGetSlots/Procedure/RANextSlotsSetup"
+}

@@ -1,0 +1,22 @@
+{
+    "accountId": "0013x00002RKjN8AAL",
+    "action": "Main",
+    "contactId": "0033x00003CZrggAAD",
+    "isRescheduleFlow": false,
+    "operatingHoursId": "0OH3x000000TTUKGA4",
+    "serviceAddress": {
+        "city": "Edinburgh",
+        "country": "United Kingdom",
+        "postalCode": "EEH15 3HR",
+        "serviceLocationId": "a403x000001BTiBAAW",
+        "serviceLocationName": "5 Whitehill Rd, Newcraighall, Edinburgh, Scotland, United Kingdom, EEH15 3HR",
+        "serviceLocationSearchKey": "5 Whitehill Rd, Newcraighall, Edinburgh, Scotland, United Kingdom, EEH15 3HR",
+        "state": "Scotland",
+        "street": "5 Whitehill Rd, Newcraighall"
+    },
+    "serviceAppointmentId": "",
+    "serviceDescription": "test",
+    "serviceTerritory": "CA",
+    "serviceType": "Gas",
+    "workType": "Gas Leakage Order"
+}

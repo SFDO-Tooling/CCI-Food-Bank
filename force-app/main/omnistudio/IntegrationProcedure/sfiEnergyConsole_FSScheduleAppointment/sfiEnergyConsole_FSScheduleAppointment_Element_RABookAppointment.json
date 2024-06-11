@@ -1,0 +1,56 @@
+{
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "RABookAppointment",
+    "OmniProcessId": {
+        "Name": "sfiEnergyConsoleFSScheduleAppointment",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/sfiEnergyConsole/FSScheduleAppointment/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalChainableResponse": {
+        },
+        "additionalInput": {
+            "APICallout": true,
+            "currentRangeDT": "%currentRangeDT%",
+            "endTimeVal": "%selectedEndTime%",
+            "isRescheduleFlow": "%isRescheduleFlow%",
+            "schedulingPolicyId": "%schedulingPolicyId%",
+            "servTypeDesc": "%SVBookAppointment:servDescription%",
+            "serviceAppointmentValue": "%serviceAppointmentValue%",
+            "startTimeVal": "%selectedStartTime%",
+            "timeZone": "%timeZone%",
+            "workOrderId": "%workOrderId%"
+        },
+        "additionalOutput": {
+        },
+        "chainOnStep": false,
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+            "ErrorMessage": "RABookAppointment : Failed to book the appointment"
+        },
+        "label": "RemoteAction1",
+        "remoteClass": "sfiEnergyConsoleFSAPIFactory",
+        "remoteMethod": "bookFSAppointment",
+        "remoteOptions": {
+        },
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": true,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "Remote Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/sfiEnergyConsole/FSScheduleAppointment/Procedure/RABookAppointment"
+}

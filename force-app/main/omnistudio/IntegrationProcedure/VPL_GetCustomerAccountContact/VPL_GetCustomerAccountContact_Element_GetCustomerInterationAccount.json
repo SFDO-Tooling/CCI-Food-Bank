@@ -1,0 +1,48 @@
+{
+    "Description": "Fetch Account Id & Contact Id from CustomerInteraction Object",
+    "IsActive": true,
+    "IsOmniScriptEmbeddable": false,
+    "Name": "GetCustomerInterationAccount",
+    "OmniProcessId": {
+        "Name": "VPL-GetAccountContact",
+        "VlocityDataPackType": "VlocityMatchingKeyObject",
+        "VlocityMatchingRecordSourceKey": "OmniProcess/VPL/GetCustomerAccountContact/Procedure",
+        "VlocityRecordSObjectType": "OmniProcess"
+    },
+    "PropertySetConfig": {
+        "actionMessage": "",
+        "additionalInput": {
+        },
+        "additionalOutput": {
+        },
+        "bundle": "VPLGetCustomerInteractionAccount",
+        "chainOnStep": false,
+        "dataRaptor Input Parameters": [
+            {
+                "element": "Id",
+                "inputParam": "Id"
+            }
+        ],
+        "disOnTplt": false,
+        "executionConditionalFormula": "",
+        "failOnStepError": true,
+        "failureConditionalFormula": "",
+        "failureResponse": {
+        },
+        "ignoreCache": false,
+        "label": "DataRaptorExtractAction1",
+        "responseJSONNode": "",
+        "responseJSONPath": "",
+        "returnOnlyAdditionalOutput": false,
+        "returnOnlyFailureResponse": false,
+        "sendJSONNode": "",
+        "sendJSONPath": "",
+        "sendOnlyAdditionalInput": false,
+        "show": null,
+        "useFormulas": true
+    },
+    "Type": "DataRaptor Extract Action",
+    "VlocityDataPackType": "SObject",
+    "VlocityRecordSObjectType": "OmniProcessElement",
+    "VlocityRecordSourceKey": "OmniProcessElement/OmniProcess/VPL/GetCustomerAccountContact/Procedure/GetCustomerInterationAccount"
+}
