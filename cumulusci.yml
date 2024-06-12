@@ -4,7 +4,7 @@ project:
     package:
         name: CumulusCI Food Bank Demo
         namespace: ccifb1
-        api_version: '47.0'
+        api_version: '60.0'
     source_format: sfdx
     git:
         repo_url: https://github.com/SFDO-Tooling/CCI-Food-Bank
