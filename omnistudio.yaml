@@ -1,0 +1,4 @@
+projectPath: force-app/main/omnistudio
+queries:
+-   VlocityDataPackType: OmniScript
+    query: Replace with Your Query
