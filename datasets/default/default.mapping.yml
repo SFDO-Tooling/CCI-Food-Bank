@@ -10,3 +10,874 @@ Insert Account:
   table: Account
   fields:
   - Name
+Insert Contact:
+  sf_object: Contact
+  table: Contact
+  fields:
+  - LastName
+Insert Lead:
+  sf_object: Lead
+  table: Lead
+  fields:
+  - Company
+  - LastName
+Insert ApptBundleConfig:
+  sf_object: ApptBundleConfig
+  table: ApptBundleConfig
+  fields:
+  - Name
+Insert ApptBundlePolicy:
+  sf_object: ApptBundlePolicy
+  table: ApptBundlePolicy
+  fields:
+  - Name
+  - Priority
+Insert Asset:
+  sf_object: Asset
+  table: Asset
+  fields:
+  - Name
+Insert AttributeDefinition:
+  sf_object: AttributeDefinition
+  table: AttributeDefinition
+  fields:
+  - DataType
+  - DeveloperName
+  - Label
+  - Name
+Insert AttributePicklist:
+  sf_object: AttributePicklist
+  table: AttributePicklist
+  fields:
+  - Code
+  - Name
+Insert Campaign:
+  sf_object: Campaign
+  table: Campaign
+  fields:
+  - Name
+Insert Case:
+  sf_object: Case
+  table: Case
+Insert ContactRequest:
+  sf_object: ContactRequest
+  table: ContactRequest
+Insert Expense:
+  sf_object: Expense
+  table: Expense
+  fields:
+  - Amount
+  - TransactionDate
+Insert ExpenseReport:
+  sf_object: ExpenseReport
+  table: ExpenseReport
+Insert Image:
+  sf_object: Image
+  table: Image
+Insert LegalEntity:
+  sf_object: LegalEntity
+  table: LegalEntity
+  fields:
+  - Name
+Insert ListEmail:
+  sf_object: ListEmail
+  table: ListEmail
+  fields:
+  - FromAddress
+  - Name
+  - Status
+Insert Location:
+  sf_object: Location
+  table: Location
+  fields:
+  - Name
+Insert MaintenancePlan:
+  sf_object: MaintenancePlan
+  table: MaintenancePlan
+  fields:
+  - GenerationTimeframe
+  - NextSuggestedMaintenanceDate
+  - StartDate
+Insert Opportunity:
+  sf_object: Opportunity
+  table: Opportunity
+  fields:
+  - CloseDate
+  - Name
+  - StageName
+Insert Order:
+  sf_object: Order
+  table: Order
+  fields:
+  - EffectiveDate
+  - Status
+Insert PrivacyRTBFRequest:
+  sf_object: PrivacyRTBFRequest
+  table: PrivacyRTBFRequest
+  fields:
+  - JobRecord
+Insert Product2:
+  sf_object: Product2
+  table: Product2
+  fields:
+  - Name
+Insert ProductRequest:
+  sf_object: ProductRequest
+  table: ProductRequest
+Insert ProductServiceCampaign:
+  sf_object: ProductServiceCampaign
+  table: ProductServiceCampaign
+  fields:
+  - ProductServiceCampaignName
+  - StartDate
+  - Type
+Insert ProductTransfer:
+  sf_object: ProductTransfer
+  table: ProductTransfer
+  fields:
+  - QuantitySent
+Insert ReturnOrder:
+  sf_object: ReturnOrder
+  table: ReturnOrder
+Insert SchedulingWorkspace:
+  sf_object: SchedulingWorkspace
+  table: SchedulingWorkspace
+  fields:
+  - Name
+Insert ServiceAppointment:
+  sf_object: ServiceAppointment
+  table: ServiceAppointment
+  fields:
+  - DueDate
+  - EarliestStartTime
+Insert ServiceContract:
+  sf_object: ServiceContract
+  table: ServiceContract
+  fields:
+  - Name
+Insert ServiceCrew:
+  sf_object: ServiceCrew
+  table: ServiceCrew
+  fields:
+  - CrewSize
+  - Name
+Insert ServiceResource:
+  sf_object: ServiceResource
+  table: ServiceResource
+  fields:
+  - Name
+Insert Shift:
+  sf_object: Shift
+  table: Shift
+  fields:
+  - EndTime
+  - StartTime
+Insert ShiftPattern:
+  sf_object: ShiftPattern
+  table: ShiftPattern
+  fields:
+  - Name
+  - PatternLength
+Insert Shipment:
+  sf_object: Shipment
+  table: Shipment
+  fields:
+  - ShipToName
+Insert Solution:
+  sf_object: Solution
+  table: Solution
+  fields:
+  - SolutionName
+Insert TravelMode:
+  sf_object: TravelMode
+  table: TravelMode
+  fields:
+  - Name
+Insert WarrantyTerm:
+  sf_object: WarrantyTerm
+  table: WarrantyTerm
+  fields:
+  - EffectiveStartDate
+  - WarrantyDuration
+  - WarrantyTermName
+  - WarrantyType
+  - WarrantyUnitOfTime
+Insert WorkOrder:
+  sf_object: WorkOrder
+  table: WorkOrder
+Insert WorkPlanTemplate:
+  sf_object: WorkPlanTemplate
+  table: WorkPlanTemplate
+  fields:
+  - Name
+Insert WorkStepTemplate:
+  sf_object: WorkStepTemplate
+  table: WorkStepTemplate
+  fields:
+  - Name
+Insert ShiftTemplate:
+  sf_object: ShiftTemplate
+  table: ShiftTemplate
+  fields:
+  - Duration
+  - Name
+  - StartTime
+Insert OperatingHours:
+  sf_object: OperatingHours
+  table: OperatingHours
+  fields:
+  - Name
+  - TimeZone
+Insert Payment:
+  sf_object: Payment
+  table: Payment
+  fields:
+  - Amount
+  - ProcessingMode
+  - Status
+  - Type
+Insert PaymentAuthorization:
+  sf_object: PaymentAuthorization
+  table: PaymentAuthorization
+  fields:
+  - Amount
+  - ProcessingMode
+  - Status
+Insert Refund:
+  sf_object: Refund
+  table: Refund
+  fields:
+  - Amount
+  - ProcessingMode
+  - Status
+  - Type
+Insert Pricebook2:
+  sf_object: Pricebook2
+  table: Pricebook2
+  fields:
+  - Name
+Insert Individual:
+  sf_object: Individual
+  table: Individual
+  fields:
+  - LastName
+Insert Holiday:
+  sf_object: Holiday
+  table: Holiday
+  fields:
+  - Name
+Insert ContactPointAddress:
+  sf_object: ContactPointAddress
+  table: ContactPointAddress
+  fields:
+  - Name
+Insert ContactPointEmail:
+  sf_object: ContactPointEmail
+  table: ContactPointEmail
+  fields:
+  - EmailAddress
+Insert ContactPointPhone:
+  sf_object: ContactPointPhone
+  table: ContactPointPhone
+  fields:
+  - TelephoneNumber
+Insert CommSubscription:
+  sf_object: CommSubscription
+  table: CommSubscription
+  fields:
+  - Name
+Insert EngagementChannelType:
+  sf_object: EngagementChannelType
+  table: EngagementChannelType
+  fields:
+  - Name
+Insert ApptBundleAggrPolicy:
+  sf_object: ApptBundleAggrPolicy
+  table: ApptBundleAggrPolicy
+  fields:
+  - Name
+  lookups:
+    BundlePolicyId:
+      table:
+      - ApptBundlePolicy
+      key_field: BundlePolicyId
+Insert ApptBundlePolicySvcTerr:
+  sf_object: ApptBundlePolicySvcTerr
+  table: ApptBundlePolicySvcTerr
+  fields:
+  - Name
+  lookups:
+    BundlePolicyId:
+      table:
+      - ApptBundlePolicy
+      key_field: BundlePolicyId
+Insert ApptBundlePropagatePolicy:
+  sf_object: ApptBundlePropagatePolicy
+  table: ApptBundlePropagatePolicy
+  fields:
+  - Name
+  lookups:
+    BundlePolicyId:
+      table:
+      - ApptBundlePolicy
+      key_field: BundlePolicyId
+Insert ApptBundleRestrictPolicy:
+  sf_object: ApptBundleRestrictPolicy
+  table: ApptBundleRestrictPolicy
+  fields:
+  - Name
+  lookups:
+    BundlePolicyId:
+      table:
+      - ApptBundlePolicy
+      key_field: BundlePolicyId
+Insert ApptBundleSortPolicy:
+  sf_object: ApptBundleSortPolicy
+  table: ApptBundleSortPolicy
+  fields:
+  - Name
+  - SortDirection
+  - SortType
+  lookups:
+    BundlePolicyId:
+      table:
+      - ApptBundlePolicy
+      key_field: BundlePolicyId
+Insert AssetAccountParticipant:
+  sf_object: AssetAccountParticipant
+  table: AssetAccountParticipant
+  fields:
+  - EffectiveStartDate
+  - Name
+  - StakeholderRole
+  - UsageType
+  lookups:
+    AccountId:
+      table:
+      - Account
+      key_field: AccountId
+    AssetId:
+      table:
+      - Asset
+      key_field: AssetId
+Insert AssetContactParticipant:
+  sf_object: AssetContactParticipant
+  table: AssetContactParticipant
+  fields:
+  - EffectiveStartDate
+  - Name
+  - StakeholderRole
+  - UsageType
+  lookups:
+    AssetId:
+      table:
+      - Asset
+      key_field: AssetId
+    ContactId:
+      table:
+      - Contact
+      key_field: ContactId
+Insert AssetDowntimePeriod:
+  sf_object: AssetDowntimePeriod
+  table: AssetDowntimePeriod
+  fields:
+  - EndTime
+  - StartTime
+  lookups:
+    AssetId:
+      table:
+      - Asset
+      key_field: AssetId
+Insert AssetRelationship:
+  sf_object: AssetRelationship
+  table: AssetRelationship
+  lookups:
+    AssetId:
+      table:
+      - Asset
+      key_field: AssetId
+    RelatedAssetId:
+      table:
+      - Asset
+      key_field: RelatedAssetId
+Insert AssetWarranty:
+  sf_object: AssetWarranty
+  table: AssetWarranty
+  fields:
+  - StartDate
+  lookups:
+    AssetId:
+      table:
+      - Asset
+      key_field: AssetId
+Insert AssignedResource:
+  sf_object: AssignedResource
+  table: AssignedResource
+  lookups:
+    ServiceAppointmentId:
+      table:
+      - ServiceAppointment
+      key_field: ServiceAppointmentId
+    ServiceResourceId:
+      table:
+      - ServiceResource
+      key_field: ServiceResourceId
+Insert AttributePicklistValue:
+  sf_object: AttributePicklistValue
+  table: AttributePicklistValue
+  fields:
+  - Code
+  - Name
+  - Value
+  lookups:
+    PicklistId:
+      table:
+      - AttributePicklist
+      key_field: PicklistId
+Insert Contract:
+  sf_object: Contract
+  table: Contract
+  lookups:
+    AccountId:
+      table:
+      - Account
+      key_field: AccountId
+Insert Entitlement:
+  sf_object: Entitlement
+  table: Entitlement
+  fields:
+  - Name
+  lookups:
+    AccountId:
+      table:
+      - Account
+      key_field: AccountId
+Insert ExpenseReportEntry:
+  sf_object: ExpenseReportEntry
+  table: ExpenseReportEntry
+  lookups:
+    ExpenseId:
+      table:
+      - Expense
+      key_field: ExpenseId
+    ExpenseReportId:
+      table:
+      - ExpenseReport
+      key_field: ExpenseReportId
+Insert MaintenanceAsset:
+  sf_object: MaintenanceAsset
+  table: MaintenanceAsset
+  lookups:
+    AssetId:
+      table:
+      - Asset
+      key_field: AssetId
+    MaintenancePlanId:
+      table:
+      - MaintenancePlan
+      key_field: MaintenancePlanId
+Insert OperatingHoursHoliday:
+  sf_object: OperatingHoursHoliday
+  table: OperatingHoursHoliday
+  lookups:
+    HolidayId:
+      table:
+      - Holiday
+      key_field: HolidayId
+    OperatingHoursId:
+      table:
+      - OperatingHours
+      key_field: OperatingHoursId
+Insert PartyConsent:
+  sf_object: PartyConsent
+  table: PartyConsent
+  fields:
+  - Name
+  lookups:
+    PartyId:
+      table:
+      - Individual
+      key_field: PartyId
+Insert ProductConsumed:
+  sf_object: ProductConsumed
+  table: ProductConsumed
+  fields:
+  - QuantityConsumed
+  lookups:
+    WorkOrderId:
+      table:
+      - WorkOrder
+      key_field: WorkOrderId
+Insert ProductItem:
+  sf_object: ProductItem
+  table: ProductItem
+  fields:
+  - QuantityOnHand
+  lookups:
+    LocationId:
+      table:
+      - Location
+      key_field: LocationId
+    Product2Id:
+      table:
+      - Product2
+      key_field: Product2Id
+Insert ProductRequestLineItem:
+  sf_object: ProductRequestLineItem
+  table: ProductRequestLineItem
+  fields:
+  - QuantityRequested
+  lookups:
+    ParentId:
+      table:
+      - ProductRequest
+      key_field: ParentId
+    Product2Id:
+      table:
+      - Product2
+      key_field: Product2Id
+Insert ProductServiceCampaignItem:
+  sf_object: ProductServiceCampaignItem
+  table: ProductServiceCampaignItem
+  lookups:
+    ProductServiceCampaignId:
+      table:
+      - ProductServiceCampaign
+      key_field: ProductServiceCampaignId
+Insert ResourceAbsence:
+  sf_object: ResourceAbsence
+  table: ResourceAbsence
+  fields:
+  - End
+  - Start
+  lookups:
+    ResourceId:
+      table:
+      - ServiceResource
+      key_field: ResourceId
+Insert ReturnOrderLineItem:
+  sf_object: ReturnOrderLineItem
+  table: ReturnOrderLineItem
+  fields:
+  - QuantityReturned
+  lookups:
+    ReturnOrderId:
+      table:
+      - ReturnOrder
+      key_field: ReturnOrderId
+Insert ServiceCrewMember:
+  sf_object: ServiceCrewMember
+  table: ServiceCrewMember
+  fields:
+  - StartDate
+  lookups:
+    ServiceCrewId:
+      table:
+      - ServiceCrew
+      key_field: ServiceCrewId
+    ServiceResourceId:
+      table:
+      - ServiceResource
+      key_field: ServiceResourceId
+Insert ShiftPatternEntry:
+  sf_object: ShiftPatternEntry
+  table: ShiftPatternEntry
+  fields:
+  - DayOrder
+  lookups:
+    ShiftPatternId:
+      table:
+      - ShiftPattern
+      key_field: ShiftPatternId
+    ShiftTemplateId:
+      table:
+      - ShiftTemplate
+      key_field: ShiftTemplateId
+Insert ShipmentItem:
+  sf_object: ShipmentItem
+  table: ShipmentItem
+  fields:
+  - Quantity
+  lookups:
+    ShipmentId:
+      table:
+      - Shipment
+      key_field: ShipmentId
+Insert TimeSheet:
+  sf_object: TimeSheet
+  table: TimeSheet
+  fields:
+  - EndDate
+  - StartDate
+  lookups:
+    ServiceResourceId:
+      table:
+      - ServiceResource
+      key_field: ServiceResourceId
+Insert WorkOrderLineItem:
+  sf_object: WorkOrderLineItem
+  table: WorkOrderLineItem
+  lookups:
+    WorkOrderId:
+      table:
+      - WorkOrder
+      key_field: WorkOrderId
+Insert WorkPlanSelectionRule:
+  sf_object: WorkPlanSelectionRule
+  table: WorkPlanSelectionRule
+  lookups:
+    WorkPlanTemplateId:
+      table:
+      - WorkPlanTemplate
+      key_field: WorkPlanTemplateId
+Insert WorkPlanTemplateEntry:
+  sf_object: WorkPlanTemplateEntry
+  table: WorkPlanTemplateEntry
+  lookups:
+    WorkPlanTemplateId:
+      table:
+      - WorkPlanTemplate
+      key_field: WorkPlanTemplateId
+    WorkStepTemplateId:
+      table:
+      - WorkStepTemplate
+      key_field: WorkStepTemplateId
+Insert ServiceTerritory:
+  sf_object: ServiceTerritory
+  table: ServiceTerritory
+  fields:
+  - Name
+  lookups:
+    OperatingHoursId:
+      table:
+      - OperatingHours
+      key_field: OperatingHoursId
+Insert PricebookEntry:
+  sf_object: PricebookEntry
+  table: PricebookEntry
+  fields:
+  - UnitPrice
+  lookups:
+    Pricebook2Id:
+      table:
+      - Pricebook2
+      key_field: Pricebook2Id
+    Product2Id:
+      table:
+      - Product2
+      key_field: Product2Id
+Insert CommSubscriptionChannelType:
+  sf_object: CommSubscriptionChannelType
+  table: CommSubscriptionChannelType
+  fields:
+  - Name
+  lookups:
+    CommunicationSubscriptionId:
+      table:
+      - CommSubscription
+      key_field: CommunicationSubscriptionId
+    EngagementChannelTypeId:
+      table:
+      - EngagementChannelType
+      key_field: EngagementChannelTypeId
+Insert ApptBundleAggrDurDnscale:
+  sf_object: ApptBundleAggrDurDnscale
+  table: ApptBundleAggrDurDnscale
+  fields:
+  - Name
+  lookups:
+    BundleAggregationPolicyId:
+      table:
+      - ApptBundleAggrPolicy
+      key_field: BundleAggregationPolicyId
+Insert CommSubscriptionConsent:
+  sf_object: CommSubscriptionConsent
+  table: CommSubscriptionConsent
+  fields:
+  - EffectiveFromDate
+  - Name
+  lookups:
+    CommSubscriptionChannelTypeId:
+      table:
+      - CommSubscriptionChannelType
+      key_field: CommSubscriptionChannelTypeId
+    ContactPointId:
+      table:
+      - ContactPointAddress
+      - ContactPointEmail
+      - ContactPointPhone
+      key_field: ContactPointId
+Insert ContractLineItem:
+  sf_object: ContractLineItem
+  table: ContractLineItem
+  fields:
+  - Quantity
+  - UnitPrice
+  lookups:
+    PricebookEntryId:
+      table:
+      - PricebookEntry
+      key_field: PricebookEntryId
+    ServiceContractId:
+      table:
+      - ServiceContract
+      key_field: ServiceContractId
+Insert SchedulingWorkspaceTerritory:
+  sf_object: SchedulingWorkspaceTerritory
+  table: SchedulingWorkspaceTerritory
+  lookups:
+    SchedulingWorkspaceId:
+      table:
+      - SchedulingWorkspace
+      key_field: SchedulingWorkspaceId
+    ServiceTerritoryId:
+      table:
+      - ServiceTerritory
+      key_field: ServiceTerritoryId
+Insert TimeSheetEntry:
+  sf_object: TimeSheetEntry
+  table: TimeSheetEntry
+  lookups:
+    TimeSheetId:
+      table:
+      - TimeSheet
+      key_field: TimeSheetId
+Insert WorkPlan:
+  sf_object: WorkPlan
+  table: WorkPlan
+  fields:
+  - Name
+  lookups:
+    ParentRecordId:
+      table:
+      - WorkOrder
+      - WorkOrderLineItem
+      key_field: ParentRecordId
+Insert OrderItem:
+  sf_object: OrderItem
+  table: OrderItem
+  fields:
+  - Quantity
+  lookups:
+    OrderId:
+      table:
+      - Order
+      key_field: OrderId
+    PricebookEntryId:
+      table:
+      - PricebookEntry
+      key_field: PricebookEntryId
+Insert ProcessException:
+  sf_object: ProcessException
+  table: ProcessException
+  fields:
+  - Message
+  lookups:
+    AttachedToId:
+      table:
+      - Order
+      - OrderItem
+      - Payment
+      - PaymentAuthorization
+      - Refund
+      - ReturnOrder
+      key_field: AttachedToId
+Insert WorkStep:
+  sf_object: WorkStep
+  table: WorkStep
+  fields:
+  - Name
+  lookups:
+    WorkPlanId:
+      table:
+      - WorkPlan
+      key_field: WorkPlanId
+Insert Task:
+  sf_object: Task
+  table: Task
+  lookups:
+    WhoId:
+      table:
+      - Contact
+      - Lead
+      key_field: WhoId
+    WhatId:
+      table:
+      - Account
+      - ApptBundleAggrDurDnscale
+      - ApptBundleAggrPolicy
+      - ApptBundleConfig
+      - ApptBundlePolicy
+      - ApptBundlePolicySvcTerr
+      - ApptBundlePropagatePolicy
+      - ApptBundleRestrictPolicy
+      - ApptBundleSortPolicy
+      - Asset
+      - AssetAccountParticipant
+      - AssetContactParticipant
+      - AssetDowntimePeriod
+      - AssetRelationship
+      - AssetWarranty
+      - AssignedResource
+      - AttributeDefinition
+      - AttributePicklist
+      - AttributePicklistValue
+      - Campaign
+      - Case
+      - CommSubscriptionConsent
+      - ContactRequest
+      - Contract
+      - ContractLineItem
+      - Entitlement
+      - Expense
+      - ExpenseReport
+      - ExpenseReportEntry
+      - Image
+      - LegalEntity
+      - ListEmail
+      - Location
+      - MaintenanceAsset
+      - MaintenancePlan
+      - OperatingHoursHoliday
+      - Opportunity
+      - Order
+      - PartyConsent
+      - PrivacyRTBFRequest
+      - ProcessException
+      - Product2
+      - ProductConsumed
+      - ProductItem
+      - ProductRequest
+      - ProductRequestLineItem
+      - ProductServiceCampaign
+      - ProductServiceCampaignItem
+      - ProductTransfer
+      - ResourceAbsence
+      - ReturnOrder
+      - ReturnOrderLineItem
+      - SchedulingWorkspace
+      - SchedulingWorkspaceTerritory
+      - ServiceAppointment
+      - ServiceContract
+      - ServiceCrew
+      - ServiceCrewMember
+      - ServiceResource
+      - Shift
+      - ShiftPattern
+      - ShiftPatternEntry
+      - Shipment
+      - ShipmentItem
+      - Solution
+      - TimeSheet
+      - TimeSheetEntry
+      - TravelMode
+      - WarrantyTerm
+      - WorkOrder
+      - WorkOrderLineItem
+      - WorkPlan
+      - WorkPlanSelectionRule
+      - WorkPlanTemplate
+      - WorkPlanTemplateEntry
+      - WorkStep
+      - WorkStepTemplate
+      key_field: WhatId
