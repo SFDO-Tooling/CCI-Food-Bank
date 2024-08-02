@@ -2,7 +2,3 @@ extract:
   Account:
     fields:
     - Name
-  Task:
-    fields:
-    - WhoId
-    - WhatId
