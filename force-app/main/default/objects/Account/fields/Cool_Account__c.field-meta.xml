@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cool_Account__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Denotes whether the account is a cool one.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Is this account really cool?</inlineHelpText>
+    <label>Cool Account</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>
